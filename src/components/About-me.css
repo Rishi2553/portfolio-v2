@@ -1,0 +1,166 @@
+.about-me {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  background-color: #1e1e2f;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  padding: 70px 0;
+  overflow: hidden;
+  transition: all 2s ease;
+  /* max-height: 500px; */
+}
+
+.profile-picture {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  /* transition: max-height 2s ease, opacity 0.3s ease 0.3s; */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.about-me-heading {
+  color: rgb(255, 255, 255);
+  padding-bottom: 2px;
+  margin: 40px 0 0 0;
+  
+}
+.contact-info {
+  width: 65%;
+  display: flex;
+  flex-direction: column; /* stack h2 and p vertically */
+  justify-content: center;
+  animation: contactFadeIn 2s ease forwards;
+}
+@keyframes contactFadeIn {
+  from {
+    opacity: 0;
+    /* transform: scale(0.5); */
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    /* transform: scale(1); */
+    transform: translateX(0px);
+  }
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+}
+.about-me-text {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin : 2px;
+    padding : 2px;
+}
+.view-more-btn {
+  width: fit-content;
+  margin-top: 12px;
+  padding: 8px 0;
+
+  background: transparent;
+  border: none;
+
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+  opacity: 0.8;
+  transform: translateX(4px);
+}
+.extra-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 2s ease, opacity 0.3s ease 0.3s;
+}
+
+.extra-content.show {
+  max-height: 300px;
+  opacity: 1;
+}
+.tooltip-container {
+  position: relative;
+  width: fit-content;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #222;
+  color: white;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s ease;
+
+  pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 700px) {
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap : 0;
+  }
+
+  .profile-picture {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-picture img {
+    width: 180px;
+    max-width: 180px;
+  }
+  .about-me-heading {
+    margin: 0 0 0 0;
+}
+
+  .contact-info {
+    width: 100%;
+  }
+}
