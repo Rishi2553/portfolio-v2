@@ -10,7 +10,7 @@ import './Skill.css';
 function Skill() {
   return (
     <div className="skills-section">
-      <h2>Skills</h2>
+      <h2 className="section-heading">Skills</h2>
 
       <div className="skills-grid">
         <div className="skill-card">

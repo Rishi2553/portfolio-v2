@@ -1,4 +1,5 @@
 // import { useState } from 'react'
+import Project from './components/Porject'
 import AboutMe from './components/About-me'
 import Skill from './components/Skill'
 // import './index.css'
@@ -9,8 +10,9 @@ function App() {
 
   return (
     <>
-    <AboutMe/>
-    <Skill/>
+      <AboutMe />
+      <Skill />
+      <Project />
     </>
   )
 }

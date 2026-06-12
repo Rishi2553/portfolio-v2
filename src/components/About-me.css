@@ -38,17 +38,18 @@
     transform: scale(1);
   }
 }
-.about-me-heading {
-  color: rgb(255, 255, 255);
-  padding-bottom: 2px;
-  margin: 40px 0 0 0;
-  
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
 }
 .contact-info {
   width: 65%;
   display: flex;
   flex-direction: column; /* stack h2 and p vertically */
   justify-content: center;
+  max-width: 850px;
   animation: contactFadeIn 2s ease forwards;
 }
 @keyframes contactFadeIn {
@@ -67,7 +68,7 @@
 .contact-info h2 {
   margin-bottom: 1rem;
 }
-.about-me-text {
+.text {
     color: rgb(255, 255, 255);
     font-size: 18px;
     margin : 2px;

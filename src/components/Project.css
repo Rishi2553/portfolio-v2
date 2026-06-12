@@ -1,0 +1,228 @@
+.project-section {
+  padding: 40px 20px;
+  background: #2f315f;
+}
+.project-card {
+  background: #313552;
+  border-radius: 16px;
+  padding: 30px;
+  color: white;
+
+    border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25),
+    0 0 0 1px rgba(255,255,255,0.05);
+  /* overflow: hidden; */
+  margin : 20px;
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+
+
+
+/* Smooth expand/collapse */
+.project-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* background: #8289c4; */
+
+  transition:
+    max-height 0.8s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;
+
+  transform: translateY(-20px);
+}
+
+.project-details.show {
+  max-height: 2500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.module-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  margin-top: 20px;
+  padding: 20px;
+
+  background: #454a7a;
+  border-radius: 12px;
+
+  opacity: 0;
+}
+
+/* Left cards slide from left */
+.project-details.show .left-image {
+  animation: slideRight 0.8s ease forwards;
+}
+
+/* Right cards slide from right */
+.project-details.show .right-image {
+  animation: slideLeft 0.8s ease forwards;
+}
+
+.module-card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+.module-card img:hover {
+  transform: scale(1.10);
+}
+.module-card:hover {
+  background: #555b93;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.github-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.github-link a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.github-link a:hover {
+  text-decoration: underline;
+}
+
+.left-image {
+  flex-direction: row;
+}
+
+.right-image {
+  flex-direction: row-reverse;
+}
+.image-popup {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.85);
+
+  z-index: 9999;
+}
+
+.popup-image {
+  max-width: 90vw;
+  max-height: 85vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.close-btn {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 22px;
+
+  background: white;
+  color: rgb(237, 229, 229);
+}
+.image-container {
+  position: relative;
+  width: fit-content;
+}
+
+.image-tooltip {
+  position: absolute;
+
+  bottom: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: rgba(0,0,0,0.8);
+  color: white;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  pointer-events: none;
+}
+
+.image-container:hover .image-tooltip {
+  opacity: 1;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .module-card,
+  .left-image,
+  .right-image {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .module-card img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .module-card h4 {
+    font-size: 1.3rem;
+  }
+}
