@@ -1,5 +1,5 @@
 .project-section {
-  padding: 40px 20px;
+  padding: 40px 5px;
   background: #2f315f;
 }
 .project-card {
@@ -18,7 +18,12 @@
   transition: transform 0.3s ease,
               box-shadow 0.3s ease;
 }
-
+.project-card h3 {
+  font-size: 1.75rem;
+}
+.project-card h4 {
+  font-size: 1.25rem;
+}
 
 
 
@@ -54,18 +59,35 @@
   background: #454a7a;
   border-radius: 12px;
 
-  opacity: 0;
+    opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+/* .project-details.show .module-card {
+  opacity: 1;
+  transform: translateY(0);
+} */
+.project-details.show .module-card:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
 }
 
+.project-details.show .module-card:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.project-details.show .module-card:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
 /* Left cards slide from left */
-.project-details.show .left-image {
-  animation: slideRight 0.8s ease forwards;
-}
 
-/* Right cards slide from right */
-.project-details.show .right-image {
-  animation: slideLeft 0.8s ease forwards;
-}
 
 .module-card img {
   width: 300px;
@@ -116,12 +138,13 @@
   align-items: center;
 
   background: rgba(0,0,0,0.85);
+  animation: fadeIn 1.5s ease forwards;
 
   z-index: 9999;
 }
 
 .popup-image {
-  max-width: 90vw;
+  max-width: 85vw;
   max-height: 85vh;
 
   width: auto;
@@ -129,26 +152,28 @@
 
   object-fit: contain;
   border-radius: 12px;
+  animation: fadeIn 4s ease forwards;
 }
 
 .close-btn {
-  position: absolute;
+  position: fixed;
 
   top: 20px;
   right: 20px;
 
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 
-  border: none;
   border-radius: 50%;
+  border: none;
 
+  font-size: 24px;
   cursor: pointer;
 
-  font-size: 22px;
-
   background: white;
-  color: rgb(237, 229, 229);
+  color: #333;
+
+  z-index: 10000;
 }
 .image-container {
   position: relative;
@@ -204,9 +229,18 @@
 }
 
 @media (max-width: 768px) {
+  .project-section {
+    padding: 10px 10px;
+  }
+
 
   .project-card {
-    padding: 20px;
+    padding: 7px;
+    margin:0;
+  }
+  .popup-image {
+    max-width: 75vw;
+    max-height: 75vh;
   }
 
   .module-card,
@@ -222,7 +256,11 @@
     height: auto;
   }
 
-  .module-card h4 {
+  .project-card h4 {
+    font-size: 1.2rem;
+  }
+  .project-card h3 {
     font-size: 1.3rem;
   }
+
 }
