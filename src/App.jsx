@@ -12,11 +12,11 @@ function App() {
     <>
       <div className="app-layout">
 
-      <Sidebar />
+        <Sidebar />
 
-      <MainContent />
+        <MainContent />
 
-    </div>
+      </div>
     </>
   )
 }

@@ -39,15 +39,15 @@ function Portfolio() {
             >
                 {showMore ? "View Less ▲" : "View More ▼"}
             </button>
-                <div className="portfolio-link">
-                    <a
-                        href="https://portfolio-b2316.web.app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View Portfolio
-                    </a>
-                </div>
+            <div className="portfolio-link">
+                <a
+                    href="https://portfolio-b2316.web.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Portfolio
+                </a>
+            </div>
         </div>
     );
 }

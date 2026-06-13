@@ -20,13 +20,13 @@ function BusTrackPlus() {
       <div className={`project-details ${showMore ? "show" : ""}`}>
         <div className="module-card left-image">
           <div className="image-container">
-          <img
-            src={adminImg}
-            className="module-img"
-            alt="Admin Module"
-            onClick={() => setSelectedImage(adminImg)}
-          />
-          <span className="image-tooltip">
+            <img
+              src={adminImg}
+              className="module-img"
+              alt="Admin Module"
+              onClick={() => setSelectedImage(adminImg)}
+            />
+            <span className="image-tooltip">
               Click image to view
             </span>
           </div>
@@ -45,13 +45,13 @@ function BusTrackPlus() {
         </div>
         <div className="module-card right-image">
           <div className="image-container">
-          <img
-            src={conductorImg}
-            className="module-img"
-            alt="Conductor Module"
-            onClick={() => setSelectedImage(conductorImg)}
-          />
-          <span className="image-tooltip">
+            <img
+              src={conductorImg}
+              className="module-img"
+              alt="Conductor Module"
+              onClick={() => setSelectedImage(conductorImg)}
+            />
+            <span className="image-tooltip">
               Click image to view
             </span>
           </div>
@@ -69,15 +69,15 @@ function BusTrackPlus() {
         </div>
         <div className="module-card left-image">
           <div className="image-container">
-          <img
-            src={passengerImg}
-            className="module-img"
-            alt="Passenger Module"
-            onClick={() => setSelectedImage(passengerImg)}
-          />
-          <span className="image-tooltip">
-            Click image to view
-          </span>
+            <img
+              src={passengerImg}
+              className="module-img"
+              alt="Passenger Module"
+              onClick={() => setSelectedImage(passengerImg)}
+            />
+            <span className="image-tooltip">
+              Click image to view
+            </span>
           </div>
           <div>
             <h4>Passenger Module</h4>

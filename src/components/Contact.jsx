@@ -49,21 +49,21 @@ function Contact() {
       },
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
-    .then(() => {
-      alert("Message sent successfully!");
+      .then(() => {
+        alert("Message sent successfully!");
 
-      setFormData({
-        name: "",
-        email: "",
-        message: ""
+        setFormData({
+          name: "",
+          email: "",
+          message: ""
+        });
+      })
+      .catch(() => {
+        alert("Failed to send message.");
+      })
+      .finally(() => {
+        setSending(false);
       });
-    })
-    .catch(() => {
-      alert("Failed to send message.");
-    })
-    .finally(() => {
-      setSending(false);
-    });
   };
 
   return (
@@ -111,65 +111,65 @@ function Contact() {
 
         </div>
 
-<div className="contact-info-card">
+        <div className="contact-info-card">
 
-  <h3>Contact Information</h3>
+          <h3>Contact Information</h3>
 
-  <div className="contact-box">
+          <div className="contact-box">
 
-    <div className="contact-item">
-      <img className="contact-logo" src={phoneLogo} alt="Phone" />
-      <span>9941796850</span>
-    </div>
+            <div className="contact-item">
+              <img className="contact-logo" src={phoneLogo} alt="Phone" />
+              <span>9941796850</span>
+            </div>
 
-    <div className="contact-item">
-      <img className="contact-logo" src={mailLogo} alt="Email" />
-      <a href="mailto:rishipanneerselvam@gmail.com">
-        rishipanneerselvam@gmail.com
-      </a>
-    </div>
+            <div className="contact-item">
+              <img className="contact-logo" src={mailLogo} alt="Email" />
+              <a href="mailto:rishipanneerselvam@gmail.com">
+                rishipanneerselvam@gmail.com
+              </a>
+            </div>
 
-    <div className="contact-item">
-      <img className="contact-logo" src={locationLogo} alt="Location" />
-      <span>Chennai, Tamil Nadu</span>
-    </div>
+            <div className="contact-item">
+              <img className="contact-logo" src={locationLogo} alt="Location" />
+              <span>Chennai, Tamil Nadu</span>
+            </div>
 
-    <div className="contact-item">
-      <img className="contact-logo" src={linkedinLogo} alt="LinkedIn" />
-      <a
-        href="https://www.linkedin.com/in/rishi-panneerselvam-325667218"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LinkedIn Profile
-      </a>
-    </div>
+            <div className="contact-item">
+              <img className="contact-logo" src={linkedinLogo} alt="LinkedIn" />
+              <a
+                href="https://www.linkedin.com/in/rishi-panneerselvam-325667218"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Rishi Panneerselvam
+              </a>
+            </div>
 
-    <div className="contact-item">
-      <img className="contact-logo" src={githubLogo} alt="GitHub" />
-      <a
-        href="https://github.com/Rishi2553"
-        target="_blank"
-        rel="noreferrer"
-      >
-        GitHub Profile
-      </a>
-    </div>
+            <div className="contact-item">
+              <img className="contact-logo" src={githubLogo} alt="GitHub" />
+              <a
+                href="https://github.com/Rishi2553"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Rishi2553
+              </a>
+            </div>
 
-    <div className="contact-item">
-      <img className="contact-logo" src={leetcodeLogo} alt="LeetCode" />
-      <a
-        href="https://leetcode.com/u/Rishi2553/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        LeetCode Profile
-      </a>
-    </div>
+            <div className="contact-item">
+              <img className="contact-logo" src={leetcodeLogo} alt="LeetCode" />
+              <a
+                href="https://leetcode.com/u/Rishi2553/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Rishi2553
+              </a>
+            </div>
 
-  </div>
+          </div>
 
-</div>
+        </div>
 
       </div>
 

@@ -1,26 +1,26 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .app-layout {
-  display: flex;
+    display: flex;
 }
 
 .content {
-  margin-left: 220px;
-  width: calc(100% - 220px);
+    margin-left: 220px;
+    width: calc(100% - 220px);
 }
 
 .content {
-  margin-left: 220px;
-  width: calc(100% - 220px);
+    margin-left: 220px;
+    width: calc(100% - 220px);
 }
 
 @media (max-width: 768px) {
 
-  .content {
-    margin-left: 0;
-    width: 100%;
-  }
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
 
 }
