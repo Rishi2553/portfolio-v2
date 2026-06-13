@@ -1,9 +1,7 @@
 // import { useState } from 'react'
-import Project from './components/Porject'
-import AboutMe from './components/About-me'
-import Skill from './components/Skill'
-import CareerJourney from './components/CareerJourney'
-import Contact from './components/Contact'
+import Sidebar from './components/Sidebar'
+import MainContent from './components/MainContent'
+
 // import './index.css'
 
 import './App.css'
@@ -12,11 +10,13 @@ function App() {
 
   return (
     <>
-      <AboutMe />
-      <Skill />
-      <Project />
-      <CareerJourney />
-      <Contact />
+      <div className="app-layout">
+
+      <Sidebar />
+
+      <MainContent />
+
+    </div>
     </>
   )
 }
