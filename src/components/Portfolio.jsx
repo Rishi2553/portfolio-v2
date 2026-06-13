@@ -41,7 +41,7 @@ function Portfolio() {
             </button>
                 <div className="portfolio-link">
                     <a
-                        href="https://rishi-panneerselvam.web.app/"
+                        href="https://portfolio-b2316.web.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
