@@ -236,7 +236,7 @@
 
   .project-card {
     padding: 7px;
-    margin:0;
+    margin-top: 10px;
   }
   .popup-image {
     max-width: 75vw;
