@@ -75,7 +75,13 @@ function Contact() {
 
         <div className="contact-form-card">
 
-          <h3>Send Me a Message</h3>
+          <h3>Let's Connect</h3>
+
+          <p className="contact-description">
+            Thank you for visiting my portfolio. If you'd like to discuss a
+            project, explore collaboration opportunities, or simply say hello,
+            feel free to send me a message. I'll get back to you as soon as possible.
+          </p>
 
           <form onSubmit={sendEmail}>
 

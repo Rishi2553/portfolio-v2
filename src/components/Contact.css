@@ -147,6 +147,16 @@
   color: #61dafb;
 }
 
+.contact-form-card h3 {
+  font-size: 1.75rem;
+}
+.contact-description {
+  font-size: 17px;
+}
+.contact-info-card h3 {
+  font-size: 1.75rem;
+}
+
 @media (max-width: 768px) {
 
   .contact-container {
