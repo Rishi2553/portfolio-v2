@@ -15,7 +15,7 @@ function SocialLinks() {
         href="https://github.com/Rishi2553"
         target="_blank"
         rel="noreferrer"
-        className="social-icon"    
+        className="social-icon"
       >
         <FaGithub />
         <span className="tooltip">GitHub</span>

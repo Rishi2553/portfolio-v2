@@ -23,7 +23,7 @@
 
     display: flex;
     flex-direction: column;
-    
+
 
     width: 100%;
     gap: 5px;
@@ -54,6 +54,7 @@
         color 0.3s ease,
         transform 0.3s ease;
 }
+
 .sidebar button:hover {
     background: #313552;
 
@@ -65,12 +66,14 @@
 .sidebar button:active {
     transform: translateX(2px);
 }
+
 .nav-icon {
     font-size: 18px;
     color: #61dafb;
 
     flex-shrink: 0;
 }
+
 /* Mobile */
 @media (max-width: 768px) {
 
@@ -79,4 +82,3 @@
     }
 
 }
-

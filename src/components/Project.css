@@ -244,6 +244,7 @@
     transform: translateX(0);
   }
 }
+
 .project-card {
   position: relative;
 }
@@ -262,6 +263,7 @@
 
   border-radius: 16px 0 0 16px;
 }
+
 @media (max-width: 768px) {
   .project-section {
     padding: 10px 10px;
