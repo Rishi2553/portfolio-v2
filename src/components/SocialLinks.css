@@ -1,0 +1,75 @@
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+    margin: 20px 0 0px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #313552;
+    color: white;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #61dafb;
+    color: #151829;
+
+    transform: translateY(-4px);
+}
+.social-icon {
+    position: relative;
+}
+.tooltip {
+    position: absolute;
+
+    bottom: 120%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #313552;
+    color: white;
+
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    font-size: 12px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.social-icon:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
