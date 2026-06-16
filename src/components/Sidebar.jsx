@@ -1,6 +1,7 @@
+import Profile from './Profile';
+import Navigation from './Navigation';
+import Footer from './Footer';
 import './Sidebar.css';
-
-function Sidebar() {
 
     const scrollToSection = (id) => {
         document
@@ -10,30 +11,16 @@ function Sidebar() {
             });
     };
 
+function Sidebar() {
+
     return (
         <aside className="sidebar">
 
-            <h2 className="logo">RP</h2>
+            <Profile />
+            <Navigation scrollToSection={scrollToSection} />
+            <Footer />
 
-            <button onClick={() => scrollToSection('about')}>
-                About Me
-            </button>
 
-            <button onClick={() => scrollToSection('skills')}>
-                Skills
-            </button>
-
-            <button onClick={() => scrollToSection('projects')}>
-                Projects
-            </button>
-
-            <button onClick={() => scrollToSection('career')}>
-                Career Journey
-            </button>
-
-            <button onClick={() => scrollToSection('contact')}>
-                Contact
-            </button>
 
         </aside>
     );
