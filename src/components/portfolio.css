@@ -1,14 +1,16 @@
 .video-container {
   display: flex;
+  /* max-height: 250px;
+  max-width: 450px; */
   justify-content: center;
   margin-top: 20px;
 }
 
 .project-video {
   width: 100%;
-  max-width: 900px;
+  max-width: 675px;
 
-  max-height: 500px;
+  max-height: 375px;
 
   object-fit: contain;
 

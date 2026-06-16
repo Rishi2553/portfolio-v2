@@ -16,6 +16,7 @@
 .profile-picture {
   width: 30%;
   display: flex;
+  
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
@@ -28,7 +29,7 @@
 
 .profile-picture img {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
   opacity: 0;
   animation: fadeIn 2s ease forwards;

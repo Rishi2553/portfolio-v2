@@ -15,6 +15,17 @@ html {
     margin-left: 220px;
     width: calc(100% - 220px);
 }
+.section-divider {
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(97,218,251,0.25),
+            transparent
+        );
+}
 
 @media (max-width: 768px) {
 
