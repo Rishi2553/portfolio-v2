@@ -5,6 +5,7 @@ import Project from './Porject';
 import CareerJourney from './CareerJourney';
 import Contact from './Contact';
 import Home from './Home';
+import { motion } from 'framer-motion';
 // import { FaBars,FaTimes } from "react-icons/fa";
 
 function MainContent() {
@@ -13,9 +14,12 @@ function MainContent() {
         <main className="content">
 
             <div className="section-divider"></div>
-            <section id="home">
+            <motion.section id="home"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}>
                 <Home />
-            </section>
+            </motion.section>
 
             <div className="section-divider"></div>
             <section id="about">
