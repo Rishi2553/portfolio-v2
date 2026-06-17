@@ -22,7 +22,11 @@ function MainContent() {
             </motion.section>
 
             <div className="section-divider"></div>
-            <section id="about">
+            <section id="about"
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: .8 }}
+                viewport={{ once: true }}>
                 <AboutMe />
             </section>
             <div className="section-divider"></div>
