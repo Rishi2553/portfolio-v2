@@ -5,7 +5,7 @@ import Project from './Porject';
 import CareerJourney from './CareerJourney';
 import Contact from './Contact';
 import Home from './Home';
-import { motion } from 'framer-motion';
+import Reveal from './Reveal';
 // import { FaBars,FaTimes } from "react-icons/fa";
 
 function MainContent() {
@@ -14,20 +14,19 @@ function MainContent() {
         <main className="content">
 
             <div className="section-divider"></div>
-            <motion.section id="home"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}>
+            <section id="home">
+                <Reveal direction="fade">
                 <Home />
-            </motion.section>
+                </Reveal>
+                
+            </section>
 
             <div className="section-divider"></div>
-            <section id="about"
-                initial={{ opacity: 0, y: 80 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: .8 }}
-                viewport={{ once: true }}>
+            <section id="about">
+                <Reveal direction="left">
+               
                 <AboutMe />
+                </Reveal>
             </section>
             <div className="section-divider"></div>
 

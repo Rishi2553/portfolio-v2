@@ -1,8 +1,11 @@
+import Reveal from './Reveal';
 function Education() {
   return (
     <div className="timeline-column">
+        <Reveal direction="right">
       <h3 className="timeline-title">Education</h3>
-
+        </Reveal>
+<Reveal direction="up" delay={0}>
       <div className="timeline-item">
         <div className="timeline-dot"></div>
         <div className="timeline-content">
@@ -12,6 +15,8 @@ function Education() {
           <p>CGPA: 7.0 / 10</p>
         </div>
       </div>
+        </Reveal>
+<Reveal direction="up" delay={0.2}>
 
       <div className="timeline-item">
         <div className="timeline-dot"></div>
@@ -22,6 +27,7 @@ function Education() {
           <p>Percentage: 89%</p>
         </div>
       </div>
+</Reveal>
     </div>
   );
 }

@@ -1,8 +1,12 @@
+import Reveal from './Reveal';
 function Experience() {
   return (
     <div className="timeline-column">
-      <h3 className="timeline-title">Experience</h3>
+      <Reveal direction="left">
+        <h3 className="timeline-title">Experience</h3>
+      </Reveal>
 
+        <Reveal direction="up" delay={0}>
       <div className="timeline-item">
         <div className="timeline-dot"></div>
         <div className="timeline-content">
@@ -11,8 +15,10 @@ function Experience() {
           <span>December 2025 - February 2026</span>
         </div>
       </div>
+        </Reveal>
 
-      <div className="timeline-item">
+<Reveal direction="up" delay={0.2}>
+          <div className="timeline-item">
         <div className="timeline-dot"></div>
         <div className="timeline-content">
           <h4>Python Instructor</h4>
@@ -20,6 +26,10 @@ function Experience() {
           <span>January 2025 - August 2025</span>
         </div>
       </div>
+</Reveal>
+<Reveal direction="up" delay={0.4}>
+
+
 
       <div className="timeline-item">
         <div className="timeline-dot"></div>
@@ -29,7 +39,9 @@ function Experience() {
           <span>July 2022 - July 2023</span>
         </div>
       </div>
+      </Reveal>
     </div>
+    
   );
 }
 

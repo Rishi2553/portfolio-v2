@@ -1,7 +1,9 @@
 import { FaDownload } from "react-icons/fa";
+import Reveal from "./Reveal";
 
 function ResumeButton() {
   return (
+    <Reveal direction="up" delay={0.8}>
     <div className="resume-download">
       <a
         href="/resume.pdf"
@@ -12,6 +14,7 @@ function ResumeButton() {
         <span>Download Resume</span>
       </a>
     </div>
+    </Reveal>
   );
 }
 
