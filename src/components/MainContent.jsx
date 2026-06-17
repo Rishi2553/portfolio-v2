@@ -9,11 +9,11 @@ function MainContent() {
     return (
         <main className="content">
             <div className="section-divider"></div>
-            <section id="home">
-                <Home />
+             <section id="home">
+                     <Home />
             </section>
-            <div className="section-divider"></div>
 
+            <div className="section-divider"></div>
             <section id="about">
                 <AboutMe />
             </section>

@@ -1,4 +1,4 @@
-import ProfilePicture from "../assets/profile.png";
+import ProfilePicture from "../assets/profile.jpg";
 import SocialLinks from "./SocialLinks";
 import "./Profile.css";
 
