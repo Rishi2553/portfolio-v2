@@ -1,3 +1,4 @@
+import { FaDownload } from 'react-icons/fa';
 import './CareerJourney.css';
 
 function CareerJourney() {
@@ -72,7 +73,8 @@ function CareerJourney() {
           download
           className="resume-btn"
         >
-          Download Resume
+        <FaDownload />
+    <span>Download Resume</span>
         </a>
       </div>
 
