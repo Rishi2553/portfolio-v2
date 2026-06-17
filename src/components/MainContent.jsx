@@ -1,16 +1,20 @@
+// import React,\ { useState } from 'react';
 import AboutMe from './About-me';
 import Skill from './Skill';
 import Project from './Porject';
 import CareerJourney from './CareerJourney';
 import Contact from './Contact';
 import Home from './Home';
+// import { FaBars,FaTimes } from "react-icons/fa";
 
 function MainContent() {
+    // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
         <main className="content">
+
             <div className="section-divider"></div>
-             <section id="home">
-                     <Home />
+            <section id="home">
+                <Home />
             </section>
 
             <div className="section-divider"></div>

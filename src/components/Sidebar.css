@@ -75,10 +75,30 @@
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .sidebar {
+        width: 240px;
+        overflow-y: auto;
+        /* Enables vertical scrolling */
+        overflow-x: hidden;
+
+        position: fixed;
+
+        left: -250px;
+
+        transition: left .3s ease;
+
+        z-index: 1000;
+    }
+
+    .sidebar::-webkit-scrollbar {
         display: none;
+    }
+
+    .sidebar.active {
+
+        left: 0;
     }
 
 }
