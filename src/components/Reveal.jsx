@@ -30,7 +30,7 @@ function Reveal({
         duration,
         delay,
       }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
     >
       {children}
     </motion.div>
