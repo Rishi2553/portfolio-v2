@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 function Education() {
   return (
     <div className="timeline-column">
-        <Reveal direction="right">
+        <Reveal direction="up">
       <h3 className="timeline-title">Education</h3>
         </Reveal>
 <Reveal direction="up" delay={0}>

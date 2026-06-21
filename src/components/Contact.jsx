@@ -14,10 +14,10 @@ function Contact() {
         <h2>Contact Me</h2>
       </Reveal>
       <div className="contact-container">
-        <Reveal direction="left" delay={0.6}>
+        <Reveal direction="up" delay={0.6}>
           <ContactForm />
         </Reveal>
-        <Reveal direction="right" delay={0.2}>
+        <Reveal direction="up" delay={0.2}>
           <ContactInfo />
         </Reveal>
 

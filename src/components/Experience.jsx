@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 function Experience() {
   return (
     <div className="timeline-column">
-      <Reveal direction="left">
+      <Reveal direction="up">
         <h3 className="timeline-title">Experience</h3>
       </Reveal>
 

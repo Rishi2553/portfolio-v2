@@ -7,10 +7,10 @@ function Project() {
   return (
     <div className="project-section">
       <h2 className="section-heading">Projects</h2>
-      <Reveal direction="left">
+      <Reveal direction="up">
         <BusTrackPlus />
       </Reveal>
-      <Reveal direction="right">
+      <Reveal direction="up">
         <Portfolio />
       </Reveal>
     </div>

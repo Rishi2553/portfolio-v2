@@ -23,7 +23,7 @@ function MainContent() {
 
             <div className="section-divider"></div>
             <section id="about">
-                <Reveal direction="left">
+                <Reveal direction="up">
                
                 <AboutMe />
                 </Reveal>
