@@ -6,7 +6,7 @@ function ResumeButton() {
     <Reveal direction="up" delay={0.8}>
     <div className="resume-download">
       <a
-        href="/resume.pdf"
+        href="/Rishi.pdf"
         download
         className="resume-btn"
       >
