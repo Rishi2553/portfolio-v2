@@ -16,15 +16,15 @@ function MainContent() {
             <div className="section-divider"></div>
             <section id="home">
                 <Reveal direction="fade">
-                <Home />
+                    <Home />
                 </Reveal>
-                
+
             </section>
 
             <div className="section-divider"></div>
             <section id="about">
 
-               
+
                 <AboutMe />
             </section>
             <div className="section-divider"></div>

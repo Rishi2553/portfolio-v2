@@ -6,20 +6,31 @@
   background-color: #24284d;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding-bottom: 20px;
-  padding: 70px 0;
+  padding: 20px 30px 20px 30px;
+
   overflow: hidden;
   transition: all 2s ease;
   /* max-height: 500px; */
 }
-
+.profile-picture-wrapper {
+    display: none;
+}
 .profile-picture {
-  width: 30%;
-  display: flex;
-  
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
+    display: none;
+
+    width: 180px;
+    height: 180px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: #313552;
+
+    box-shadow:
+        0 0 0 4px rgba(97,218,251,.15),
+        0 8px 20px rgba(0,0,0,.3);
 }
 
 .profile-picture:hover {
@@ -28,11 +39,12 @@
 }
 
 .profile-picture img {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
-  opacity: 0;
-  animation: fadeIn 2s ease forwards;
+     width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    object-fit: cover;
   /* transition: max-height 2s ease, opacity 0.3s ease 0.3s; */
 }
 
@@ -56,12 +68,12 @@
 }
 
 .contact-info {
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   /* stack h2 and p vertically */
   justify-content: center;
-  max-width: 850px;
+  /* max-width: 850px; */
   animation: contactFadeIn 2s ease forwards;
 }
 
@@ -158,7 +170,7 @@
   visibility: visible;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .about-me {
     flex-direction: column;
     align-items: center;
@@ -167,10 +179,14 @@
     gap: 0;
   }
 
-  .profile-picture {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+
+    .profile-picture {
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 20px;
+    }
+
 
   .profile-picture img {
     width: 180px;
