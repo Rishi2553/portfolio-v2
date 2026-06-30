@@ -36,7 +36,7 @@ const card = {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
       >
         <motion.div className="skill-card" variants={card}>
           <img src={javaIcon} alt="Java" />
