@@ -263,6 +263,25 @@
 
   border-radius: 16px 0 0 16px;
 }
+.view-all-projects{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.view-project-btn{
+    text-decoration:none;
+    color:white;
+    background:#61dafb;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.view-project-btn:hover{
+    transform:translateY(-3px);
+}
 
 @media (max-width: 768px) {
   .project-section {

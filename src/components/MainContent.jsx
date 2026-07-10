@@ -1,7 +1,7 @@
 // import React,\ { useState } from 'react';
 import AboutMe from './About-me';
 import Skill from './Skill';
-import Project from './Porject';
+import Project from './Project';
 import CareerJourney from './CareerJourney';
 import Contact from './Contact';
 import Home from './Home';

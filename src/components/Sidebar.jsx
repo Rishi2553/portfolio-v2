@@ -2,6 +2,7 @@ import Profile from './Profile';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import './Sidebar.css';
+import { useLocation, useNavigate } from "react-router-dom";
 
 // const scrollToSection = (id) => {
 //     document
@@ -12,15 +13,27 @@ import './Sidebar.css';
 // };
 
 function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const scrollToSection = (id) => {
 
-        document
-            .getElementById(id)
-            ?.scrollIntoView({
-                behavior: "smooth"
+        setIsSidebarOpen(false);
+
+        if (location.pathname === "/") {
+
+            document.getElementById(id)?.scrollIntoView({
+                behavior: "smooth",
             });
 
-        setIsSidebarOpen(false);
+            return;
+        }
+
+        navigate("/", {
+            state: {
+                scrollTo: id,
+            },
+        });
     };
 
     return (
