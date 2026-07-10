@@ -1,140 +1,304 @@
-import { useState } from "react";
-import '../../components/Project.css';
-import adminImg from '../../assets/projects/bus-track-plus/admin.png';
-import conductorImg from '../../assets/projects/bus-track-plus/conductor.png';
-import passengerImg from '../../assets/projects/bus-track-plus/passenger.png';
-function BusTrackPlus() {
-  const [showMore, setShowMore] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-  return (
-    <div className="project-card">
-      <h3>Smart Bus Tracking & Crowd Management System</h3>
-      <p className="text">
-        A full-stack public transportation management system built using
-        Flutter, Spring Boot, MySQL, and Firebase. The system provides
-        real-time bus tracking, live crowd monitoring, crowd estimation,
-        digital ticketing, and online bus pass management to improve the
-        daily commuting experience.
-      </p>
+import {
+    FaBus,
+    FaRoute,
+    FaMapMarkerAlt,
+    FaTicketAlt,
+    FaUsers,
+    FaClipboardCheck,
+    FaQrcode,
+    FaIdCard,
+    FaWifi,
+    FaChartLine,
+} from "react-icons/fa";
+import adminImg from "../../assets/projects/bus-track-plus/admin.png";
+import conductorImg from "../../assets/projects/bus-track-plus/conductor.png";
+import "./BusTrackPlusPage.css";
+function BusTrackPlusPage() {
+    return (
+        <main className="bus-page">
 
-      <div className={`project-details ${showMore ? "show" : ""}`}>
-        <div className="module-card left-image">
-          <div className="image-container">
-            <img
-              src={adminImg}
-              className="module-img"
-              alt="Admin Module"
-              onClick={() => setSelectedImage(adminImg)}
-            />
-            <span className="image-tooltip">
-              Click image to view
-            </span>
-          </div>
-          <div>
-            <h4>Admin Module</h4>
-            <p className="text">
-              The Admin Module acts as the central management system for
-              the entire transport network. Administrators can manage
-              buses, routes, bus stops, pass types, passenger accounts,
-              and conductor accounts. They can also issue new passes,
-              review renewal requests submitted by passengers, and
-              approve or reject requests while monitoring overall system
-              operations.
-            </p>
-          </div>
-        </div>
-        <div className="module-card right-image">
-          <div className="image-container">
-            <img
-              src={conductorImg}
-              className="module-img"
-              alt="Conductor Module"
-              onClick={() => setSelectedImage(conductorImg)}
-            />
-            <span className="image-tooltip">
-              Click image to view
-            </span>
-          </div>
-          <div>
-            <h4>Conductor Module</h4>
-            <p className="text">
-              The Conductor Module digitizes traditional bus operations.
-              Conductors can issue tickets, verify digital bus passes,
-              update passenger boarding information, and maintain
-              occupancy data. This information is used to calculate live
-              crowd levels and estimate crowd conditions at upcoming bus
-              stops for passengers waiting to board.
-            </p>
-          </div>
-        </div>
-        <div className="module-card left-image">
-          <div className="image-container">
-            <img
-              src={passengerImg}
-              className="module-img"
-              alt="Passenger Module"
-              onClick={() => setSelectedImage(passengerImg)}
-            />
-            <span className="image-tooltip">
-              Click image to view
-            </span>
-          </div>
-          <div>
-            <h4>Passenger Module</h4>
-            <p className="text">
-              Passengers can track buses in real time, view current crowd
-              levels inside buses, and check estimated crowd conditions
-              at their selected boarding stop. This helps commuters
-              decide whether to board the approaching bus or wait for the
-              next available service. The module also supports online bus
-              pass applications, renewals, and digital pass management
-              without requiring a visit to a physical bus depot.
-            </p>
-          </div>
-        </div>
-      </div>
+            <div className="page-container">
 
-      <button
-        className="view-more-btn"
-        title={showMore ? "Click to view less" : "Click to view more"}
-        onClick={() => setShowMore(!showMore)}
-      >
-        {showMore ? "View Less ▲" : "View More ▼"}
-      </button>
-      <div className="github-link">
-        <p className="text">
-          View Source Code on GitHub{" "}
-          <a
-            href="https://github.com/orgs/Bus-Plus/repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Click Here
-          </a>
-        </p>
-      </div>
-      {selectedImage && (
-        <div
-          className="image-popup"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="close-btn"
-            onClick={() => setSelectedImage(null)}
-          >
-            ✕
-          </button>
+                <button className="back-btn">
+                    ← Back to Projects
+                </button>
 
-          <img
-            src={selectedImage}
-            alt="Preview"
-            className="popup-image"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-    </div>
-  );
+                <section className="hero-section">
+
+                    <div className="project-badge">
+                        Academic Final Year Project
+                    </div>
+
+                    <h1>
+                        Smart Bus Tracking & Crowd Management System
+                    </h1>
+
+                    <h3 className="hero-subtitle">
+                        Full Stack Public Transportation Management Platform
+                    </h3>
+
+                    <p className="hero-description">
+                        A full-stack public transportation management system
+                        built using Flutter, Spring Boot, MySQL and Firebase.
+                        The platform provides live bus tracking, crowd
+                        estimation, digital ticketing and smart bus pass
+                        management to improve the daily commuting experience.
+                    </p>
+
+                    <div className="tech-stack">
+
+                        <span>Flutter</span>
+                        <span>Spring Boot</span>
+                        <span>Firebase</span>
+                        <span>MySQL</span>
+
+                    </div>
+
+                    <div className="hero-buttons">
+
+                        <a
+                            href="https://github.com/orgs/Bus-Plus/repositories"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="github-btn"
+                        >
+                            View Source Code
+                        </a>
+
+                        <button className="demo-btn">
+                            Live Demo (Coming Soon)
+                        </button>
+
+                    </div>
+
+                </section>
+                <section className="banner-section">
+
+                    <div className="banner-card">
+
+                        <img
+                            src={adminImg}
+                            alt="BusTrackPlus Dashboard"
+                            className="banner-image"
+                        />
+
+                    </div>
+
+                </section>
+                <section className="overview-section">
+
+                    <h2>Project Overview</h2>
+
+                    <div className="overview-grid">
+
+                        <div className="overview-card">
+                            <h3>Problem</h3>
+                            <p>
+                                Passengers often lack visibility into live bus locations,
+                                crowd levels, and digital ticketing options, making daily
+                                commuting less efficient and predictable.
+                            </p>
+                        </div>
+
+                        <div className="overview-card">
+                            <h3>Solution</h3>
+                            <p>
+                                BusTrackPlus provides dedicated Admin, Conductor and Passenger
+                                applications that work together to deliver live bus tracking,
+                                crowd estimation, digital ticketing and smart bus pass management.
+                            </p>
+                        </div>
+
+                        <div className="overview-card">
+                            <h3>Objectives</h3>
+
+                            <ul>
+                                <li>Improve public transportation efficiency</li>
+                                <li>Live bus tracking</li>
+                                <li>Crowd estimation</li>
+                                <li>Digital ticketing</li>
+                                <li>Online bus pass management</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <section className="admin-section">
+
+                    <div className="section-header">
+
+                        <span className="section-tag">
+                            Admin Application
+                        </span>
+
+                        <h2>Administration Dashboard</h2>
+
+                        <p>
+                            The Admin application serves as the central management portal
+                            for the complete transport system.
+                        </p>
+
+                    </div>
+
+                    <div className="dashboard-preview">
+
+                        <img
+                            src={adminImg}
+                            alt="BusTrack Admin Dashboard"
+                            className="admin-dashboard-image"
+                        />
+
+                        <div className="preview-caption">
+                            BusTrack Admin Dashboard
+                        </div>
+
+                    </div>
+                    <div className="features-header">
+
+                        <h3>Core Features</h3>
+
+                        <p>
+                            The administrator manages every aspect of the transportation
+                            system through a centralized dashboard.
+                        </p>
+
+                    </div>
+                    <div className="feature-grid">
+
+                        <div className="feature-card">
+                            <FaBus className="feature-icon" />
+                            <h4>Bus Management</h4>
+                        </div>
+
+                        <div className="feature-card">
+                            <FaRoute className="feature-icon" />
+                            <h4>Route Management</h4>
+                        </div>
+
+                        <div className="feature-card">
+                            <FaMapMarkerAlt className="feature-icon" />
+                            <h4>Bus Stops</h4>
+                        </div>
+
+                        <div className="feature-card">
+                            <FaTicketAlt className="feature-icon" />
+                            <h4>Pass Management</h4>
+                        </div>
+
+                        <div className="feature-card">
+                            <FaUsers className="feature-icon" />
+                            <h4>User Management</h4>
+                        </div>
+
+                        <div className="feature-card">
+                            <FaClipboardCheck className="feature-icon" />
+                            <h4>Renewal Requests</h4>
+                        </div>
+
+                    </div>
+                    <section className="responsibility-section">
+
+                        <h3>Administrator Responsibilities</h3>
+
+                        <p>
+                            The Admin application acts as the command center for the entire
+                            transport ecosystem. Administrators can register buses, create
+                            and maintain routes, manage bus stops, configure pass types,
+                            register conductors and passengers, approve renewal requests,
+                            and monitor daily operations from a single dashboard.
+                        </p>
+
+                    </section>
+                    <section className="conductor-section">
+
+                        <div className="section-header">
+
+                            <span className="section-tag">
+                                Conductor Application
+                            </span>
+
+                            <h2>Digital Ticketing & Passenger Management</h2>
+
+                            <p>
+                                The Conductor application replaces traditional paper ticketing
+                                with a modern digital solution. It enables conductors to issue
+                                digital tickets, validate smart bus passes, update passenger
+                                boarding information, and maintain live occupancy data that is
+                                shared with the passenger application for crowd estimation.
+                            </p>
+
+                        </div>
+
+                        <div className="conductor-layout">
+
+                            {/* Phone Preview */}
+                            <div className="phone-preview">
+
+                                <img
+                                    src={conductorImg}
+                                    alt="Conductor Application"
+                                    className="phone-image"
+                                />
+
+                                <div className="preview-caption">
+                                    BusTrack Conductor Application
+                                </div>
+
+                            </div>
+
+                            {/* Features */}
+                            <div className="conductor-features">
+
+                                <h3>Core Features</h3>
+
+                                <div className="feature-list">
+
+                                    <div className="feature-item">
+                                        <FaTicketAlt className="feature-icon" />
+                                        <span>Issue Digital Tickets</span>
+                                    </div>
+
+                                    <div className="feature-item">
+                                        <FaIdCard className="feature-icon" />
+                                        <span>Validate Smart Bus Passes</span>
+                                    </div>
+
+                                    <div className="feature-item">
+                                        <FaQrcode className="feature-icon" />
+                                        <span>QR Code Scanning</span>
+                                    </div>
+
+                                    <div className="feature-item">
+                                        <FaWifi className="feature-icon" />
+                                        <span>NFC Tap Card Support</span>
+                                    </div>
+
+                                    <div className="feature-item">
+                                        <FaUsers className="feature-icon" />
+                                        <span>Passenger Boarding</span>
+                                    </div>
+
+                                    <div className="feature-item">
+                                        <FaChartLine className="feature-icon" />
+                                        <span>Live Occupancy Updates</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </section>
+
+            </div>
+
+        </main>
+    );
 }
 
-export default BusTrackPlus;
+export default BusTrackPlusPage;

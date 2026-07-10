@@ -30,16 +30,17 @@ function App() {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route
+              path="/projects/bus-track-plus"
+              element={<BusTrackPlusPage />}
+            />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route
-            path="/projects/bus-track-plus"
-            element={<BusTrackPlusPage />}
-          />
-
-        </Routes>
+          </Routes>
+        </main>
       </div>
     </BrowserRouter>
   );

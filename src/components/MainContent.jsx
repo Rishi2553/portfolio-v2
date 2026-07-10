@@ -11,7 +11,7 @@ import Reveal from './Reveal';
 function MainContent() {
     // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
-        <main className="content">
+       <>
 
             <div className="section-divider"></div>
             <section id="home">
@@ -49,7 +49,7 @@ function MainContent() {
                 <Contact />
             </section>
             <div className="section-divider"></div>
-        </main>
+        </>
     );
 }
 
