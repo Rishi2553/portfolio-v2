@@ -601,3 +601,17 @@
     }
 
 }
+.passenger-section{
+    margin-top:80px;
+}
+
+.passenger-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 420px;
+
+    gap:60px;
+
+    align-items:center;
+}
