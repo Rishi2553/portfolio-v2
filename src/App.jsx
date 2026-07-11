@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
-import BusTrackPlusPage from "./pages/projects/BusTrackPlusPage";
+import BusTrackPlusPage from "./pages/projects/bus-track-plus/BusTrackPlusPage";
 
 import "./App.css";
 

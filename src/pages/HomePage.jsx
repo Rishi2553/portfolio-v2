@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import MainContent from "../components/MainContent";
+import MainContent from "./home/sections/MainContent";
 
 function HomePage() {
 
