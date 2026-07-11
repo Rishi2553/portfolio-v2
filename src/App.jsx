@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import BusTrackPlusPage from "./pages/projects/bus-track-plus/BusTrackPlusPage";
+import PortfolioV1Page from "./pages/projects/portfolio-v1/PortfolioV1Page";
 
 import "./App.css";
 
@@ -32,11 +33,21 @@ function App() {
         />
         <main className="content">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            <Route
+              path="/"
+              element={<HomePage />}
+            />
+            <Route
+              path="/projects"
+              element={<ProjectsPage />}
+            />
             <Route
               path="/projects/bus-track-plus"
               element={<BusTrackPlusPage />}
+            />
+            <Route
+              path="/projects/portfolio-v1"
+              element={<PortfolioV1Page />}
             />
 
           </Routes>
