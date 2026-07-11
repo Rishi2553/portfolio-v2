@@ -1,6 +1,6 @@
 // import React from "react";
 
-import adminImg from "../../../../assets/projects/bus-track-plus/admin.png";
+import adminImg from "../../../../assets/projects/bus-track-plus/bustrackplus.png";
 
 function BannerSection() {
   return (

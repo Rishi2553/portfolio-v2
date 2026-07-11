@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 import Sidebar from "./components/Sidebar";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/home/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import BusTrackPlusPage from "./pages/projects/bus-track-plus/BusTrackPlusPage";
 import PortfolioV1Page from "./pages/projects/portfolio-v1/PortfolioV1Page";
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <button
         className="menu-btn"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}

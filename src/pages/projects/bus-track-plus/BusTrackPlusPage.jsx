@@ -1,5 +1,4 @@
 import HeroSection from "./sections/HeroSection";
-import BannerSection from "./sections/BannerSection";
 import OverviewSection from "./sections/OverviewSection";
 import AdminSection from "./sections/AdminSection";
 import ConductorSection from "./sections/ConductorSection";
@@ -11,18 +10,20 @@ import HighlightsSection from "./sections/HighlightsSection";
 import FutureSection from "./sections/FutureSection";
 import ProjectVideoSection from "./sections/ProjectVideoSection";
 import "./BusTrackPlusPage.css";
+import { useNavigate } from "react-router-dom";
 function BusTrackPlusPage() {
+    const navigate = useNavigate();
     return (
         <main className="bus-page">
 
             <div className="page-container">
 
-                <button className="back-btn">
+                <button 
+                className="back-btn"
+                onClick={() => navigate("/projects")}>
                     ← Back to Projects
                 </button>
                 <HeroSection />
-
-                <BannerSection />
 
                 <OverviewSection />
 

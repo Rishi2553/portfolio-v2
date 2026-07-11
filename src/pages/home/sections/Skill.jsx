@@ -1,84 +1,110 @@
-import javaIcon from '../../../assets/icons/java.png';
-import SpringIcon from '../../../assets/icons/spring-boot.png';
-import ReactIcon from '../../../assets/icons/react.svg';
-import FlutterIcon from '../../../assets/icons/flutter.png';
-import MySqlIcon from '../../../assets/icons/mysql.png';
-import {motion} from 'framer-motion';
-// import HtmlIcon from '../assets/icons/html.png';
-// import CssIcon from '../assets/icons/css.png';
-// import JsIcon from '../assets/icons/javascript.png';
-import './Skill.css';
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaJava,
+  FaGitAlt,
+  FaGithub,
+  FaKey,
+  FaServer,
+} from "react-icons/fa";
+
+import {
+  SiSpringboot,
+  SiFlutter,
+  SiDart,
+  SiFirebase,
+  SiReactrouter,
+  SiPostman,
+  // SiVisualstudiocode,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+
+import { GrMysql } from "react-icons/gr";
+
+import { motion } from "framer-motion";
+
+import "./Skill.css";
+
 function Skill() {
-  const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: .15
-    }
-  }
-};
+  const categories = [
+    {
+      title: "Frontend",
+      skills: [
+        { icon: <FaReact />, name: "React" },
+        { icon: <FaHtml5 />, name: "HTML5" },
+        { icon: <FaCss3Alt />, name: "CSS3" },
+        { icon: <FaJsSquare />, name: "JavaScript" },
+        { icon: <SiReactrouter />, name: "React Router" },
+      ],
+    },
 
-const card = {
-  hidden: {
-    opacity: 0,
-    y: 40
-  },
-  show: {
-    opacity: 1,
-    y: 0
-  }
-};
+    {
+      title: "Backend",
+      skills: [
+        { icon: <FaJava />, name: "Java" },
+        { icon: <SiSpringboot />, name: "Spring Boot" },
+        { icon: <FaKey />, name: "JWT" },
+        { icon: <FaServer />, name: "REST APIs" },
+      ],
+    },
+
+    {
+      title: "Mobile",
+      skills: [
+        { icon: <SiFlutter />, name: "Flutter" },
+        { icon: <SiDart />, name: "Dart" },
+      ],
+    },
+
+    {
+      title: "Database & Cloud",
+      skills: [
+        { icon: <GrMysql />, name: "MySQL" },
+        { icon: <SiFirebase />, name: "Firebase" },
+      ],
+    },
+
+    {
+      title: "Tools",
+      skills: [
+        { icon: <FaGitAlt />, name: "Git" },
+        { icon: <FaGithub />, name: "GitHub" },
+        { icon: <VscVscode />, name: "VS Code" },
+        { icon: <SiPostman />, name: "Postman" },
+      ],
+    },
+  ];
+
   return (
-    <div className="skills-section">
-      <h2 className="section-heading">Skills</h2>
+    <section className="skills-section">
+      <h2 className="section-heading">Technical Skills</h2>
 
-      <motion.div className="skills-grid"
-        variants={container}
-        initial="hidden"
-        whileInView="show"
+      <motion.div
+        className="category-grid"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <motion.div className="skill-card" variants={card}>
-          <img src={javaIcon} alt="Java" />
-          <p>Java</p>
-        </motion.div>
+        {categories.map((category) => (
+          <div className="category-card" key={category.title}>
+            <h3>{category.title}</h3>
 
-        <motion.div className="skill-card" variants={card}>
-          <img src={SpringIcon} alt="Spring Boot" />
-          <p>Spring Boot</p>
-        </motion.div>
-        <motion.div className="skill-card" variants={card}>
-          <img src={ReactIcon} alt="React" />
-          <p>React</p>
-        </motion.div>
-
-
-        <motion.div className="skill-card" variants={card}>
-          <img src={FlutterIcon} alt="Flutter" />
-          <p>Flutter</p>
-        </motion.div>
-
-        <motion.div className="skill-card" variants={card}>
-          <img src={MySqlIcon} alt="MySQL" />
-          <p>MySQL</p>
-        </motion.div>
-
-        {/* <div className="skill-card">
-      <img src={HtmlIcon} alt="HTML" />
-      <p>HTML</p>
-    </div>
-
-    <div className="skill-card">
-      <img src={CssIcon} alt="CSS" />
-      <p>CSS</p>
-    </div>
-
-    <div className="skill-card">
-      <img src={JavascriptIcon} alt="JavaScript" />
-      <p>JavaScript</p>
-    </div> */}
+            <div className="skills-list">
+              {category.skills.map((skill) => (
+                <div className="skill-item" key={skill.name}>
+                  <span className="skill-icon">{skill.icon}</span>
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </motion.div>
-    </div>
+    </section>
   );
 }
+
 export default Skill;

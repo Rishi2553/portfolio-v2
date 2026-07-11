@@ -1,5 +1,5 @@
-import busCover from "../assets/projects/bus-track-plus/admin.png";
-import portfolioCover from "../assets/profile.jpg";
+import busCover from "../assets/projects/bus-track-plus/bustrackplus.png";
+import portfolioCover from "../assets/projects/portfolio/Portfolio_V1_banner.png";
 
 const projects = [
   {
@@ -24,26 +24,26 @@ const projects = [
     featured: true
   },
 
-  {
-    id: 2,
+{
+  id: 2,
 
-    title: "Developer Portfolio",
+  title: "Developer Portfolio V1",
 
-    shortDescription:
-      "Modern responsive portfolio built using React and Framer Motion.",
+  shortDescription:
+    "The first version of my developer portfolio, created to learn React, component-based architecture, responsive design, and modern frontend development.",
 
-    image: portfolioCover,
+  image: portfolioCover,
 
-    technologies: [
-      "React",
-      "CSS",
-      "Framer Motion"
-    ],
+  technologies: [
+    "React",
+    "CSS",
+    "React Router"
+  ],
 
-    route: "/projects/portfolio",
+  route: "/projects/portfolio-v1",
 
-    featured: true
-  }
+  featured: true
+}
 ];
 
 export default projects;
