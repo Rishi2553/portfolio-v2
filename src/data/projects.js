@@ -1,5 +1,6 @@
 import busCover from "../assets/projects/bus-track-plus/bustrackplus.png";
 import portfolioCover from "../assets/projects/portfolio/Portfolio_V1_banner.png";
+import driveLedgerBanner from "../assets/projects/driveledger/screenshots/home.png";
 
 const projects = [
   {
@@ -24,8 +25,30 @@ const projects = [
     featured: true
   },
 
+
 {
-  id: 2,
+    id: 2,
+
+    title: "DriveLedger",
+
+    shortDescription:
+        "Offline income and expense tracking application built with Flutter and SQLite for cab drivers.",
+
+    image: driveLedgerBanner,
+
+    technologies: [
+        "Flutter",
+        "SQLite",
+        "Provider",
+        "Excel"
+    ],
+
+    route: "/projects/driveledger",
+
+    featured: true
+},
+{
+  id: 3,
 
   title: "Developer Portfolio V1",
 
@@ -43,7 +66,7 @@ const projects = [
   route: "/projects/portfolio-v1",
 
   featured: true
-}
+},
 ];
 
 export default projects;
