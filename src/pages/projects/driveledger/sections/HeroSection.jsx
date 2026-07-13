@@ -49,7 +49,7 @@ function HeroSection() {
         <div className="hero-buttons">
 
           <a
-            href="/apk/DriveLedger-v1.0.apk"
+            href="https://github.com/Rishi2553/DriveLedger/releases/download/v1.0.0/DriveLedger-v1.0.apk"
             className="download-btn"
           >
             <FaDownload />
