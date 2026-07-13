@@ -49,7 +49,7 @@ function HeroSection() {
         <div className="hero-buttons">
 
           <a
-            href="#"
+            href="/apk/DriveLedger-v1.0.apk"
             className="download-btn"
           >
             <FaDownload />
@@ -57,7 +57,7 @@ function HeroSection() {
           </a>
 
           <a
-            href="#"
+            href="https://github.com/Rishi2553/DriveLedger"
             className="github-btn"
           >
             <FaGithub />

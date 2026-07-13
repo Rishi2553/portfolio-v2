@@ -1,0 +1,56 @@
+.tech-stack-section{
+
+    padding:90px 0;
+}
+
+.tech-subtitle{
+
+    max-width:760px;
+
+    margin:25px auto 70px;
+
+    text-align:center;
+
+    color:#c8c8c8;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+
+
+
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:900px){
+
+.tech-grid{
+
+    grid-template-columns:1fr;
+}
+
+.tech-subtitle{
+
+    font-size:16px;
+
+    margin-bottom:50px;
+}
+
+}

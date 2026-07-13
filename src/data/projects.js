@@ -1,6 +1,6 @@
 import busCover from "../assets/projects/bus-track-plus/bustrackplus.png";
 import portfolioCover from "../assets/projects/portfolio/Portfolio_V1_banner.png";
-import driveLedgerBanner from "../assets/projects/driveledger/screenshots/home.png";
+import driveLedgerBanner from "../assets/projects/driveledger/banner.png";
 
 const projects = [
   {

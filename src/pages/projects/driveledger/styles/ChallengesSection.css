@@ -1,0 +1,52 @@
+.challenges-section{
+
+    padding:40 0;
+}
+
+.challenge-subtitle{
+
+    max-width:760px;
+
+    margin:20px auto 70px;
+
+    text-align:center;
+
+    color:#cfcfcf;
+
+    line-height:1.9;
+
+    font-size:18px;
+}
+
+/* =====================================
+   Grid
+===================================== */
+
+.challenge-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+}
+
+/* =====================================
+   Mobile
+===================================== */
+
+@media(max-width:900px){
+
+.challenge-grid{
+
+    grid-template-columns:1fr;
+}
+
+.challenge-subtitle{
+
+    font-size:16px;
+
+    margin-bottom:45px;
+}
+
+}

@@ -1,0 +1,142 @@
+.challenge-card{
+
+    background:#2b3057;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:22px;
+
+    padding:32px;
+
+    min-height:430px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:
+        transform .35s,
+        box-shadow .35s,
+        border-color .35s;
+}
+
+.challenge-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#61dafb;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.30);
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.challenge-header,
+.solution-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+}
+
+.challenge-header h3,
+.solution-header h3{
+
+    color:white;
+
+    font-size:24px;
+
+    margin:0;
+}
+
+/* ===========================
+   Icons
+=========================== */
+
+.challenge-icon,
+.solution-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+}
+
+/* Challenge */
+
+.challenge-icon{
+
+    background:rgba(255,145,0,.12);
+
+    color:#ff9800;
+}
+
+/* Solution */
+
+.solution-icon{
+
+    background:rgba(97,218,251,.12);
+
+    color:#61dafb;
+}
+
+/* ===========================
+   Text
+=========================== */
+
+.challenge-text,
+.solution-text{
+
+    color:#d5d5d5;
+
+    line-height:1.8;
+
+    font-size:16px;
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+    margin:28px 0;
+}
+
+/* ===========================
+   Hover Effects
+=========================== */
+
+.challenge-card:hover .solution-icon{
+
+    transform:rotate(12deg);
+
+    transition:.35s;
+}
+
+.challenge-card:hover .challenge-icon{
+
+    transform:scale(1.1);
+
+    transition:.35s;
+}

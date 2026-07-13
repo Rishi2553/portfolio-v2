@@ -113,31 +113,79 @@
 }
 
 /* Mobile */
+/* ===========================
+   Mobile
+=========================== */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-.phones-container{
+    .phones-container{
 
-    width:260px;
+        width:100%;
+        max-width:320px;
+        height:360px;
+        overflow:hidden;
+    }
 
-    height:auto;
-}
+    .phones-container::before{
 
-.phone-left,
-.phone-right{
+        width:220px;
+        height:220px;
+        filter:blur(25px);
+    }
 
-    display:none;
-}
+    .phone{
 
-.phone-center{
+        width:110px;
+        padding:5px;
+        border-radius:18px;
+    }
 
-    position:relative;
+    .phone img{
 
-    width:250px;
+        border-radius:14px;
+    }
 
-    left:0;
+    /* Center Phone */
 
-    margin:auto;
-}
+    .phone-center{
 
+        width:150px;
+
+        left:50%;
+        top:15px;
+
+        transform:translateX(-50%);
+
+        z-index:10;
+    }
+
+    /* Left Phone */
+
+    .phone-left{
+
+        left:-15px;
+        top:95px;
+
+        transform:rotate(-14deg) scale(.82);
+
+        opacity:.45;
+    }
+
+    /* Right Phone */
+
+    .phone-right{
+
+        right:-15px;
+        top:95px;
+
+        transform:rotate(14deg) scale(.82);
+
+        opacity:.45;
+    }
+
+    .phone:hover{
+
+        transform:none;
+    }
 }

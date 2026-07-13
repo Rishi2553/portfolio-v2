@@ -1,6 +1,6 @@
 import home from "../../../../assets/projects/driveledger/screenshots/home.png";
 import reports from "../../../../assets/projects/driveledger/screenshots/reports.png";
-import addTransaction from "../../../../assets/projects/driveledger/screenshots/add-transaction.png";
+import transactionDetails from "../../../../assets/projects/driveledger/screenshots/transaction-details.png";
 
 import "../styles/FloatingPhones.css";
 
@@ -23,8 +23,8 @@ function FloatingPhones() {
       />
 
       <img
-        src={addTransaction}
-        alt="Add Transaction Screen"
+        src={transactionDetails}
+        alt="Transaction Details Screen"
         className="phone phone-right"
       />
 
