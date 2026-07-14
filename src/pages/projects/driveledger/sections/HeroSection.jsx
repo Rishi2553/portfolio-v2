@@ -16,7 +16,7 @@ function HeroSection() {
       <div className="drive-hero-content">
 
         <div className="project-badge">
-          Personal Flutter Project
+          Client Flutter Project
         </div>
 
         <h1>
@@ -49,7 +49,7 @@ function HeroSection() {
         <div className="hero-buttons">
 
           <a
-            href="https://github.com/Rishi2553/DriveLedger/releases/download/v1.0.0/DriveLedger-v1.0.apk"
+            href="https://github.com/Rishi2553/DriveLedger/releases/latest/download/DriveLedger.apk"
             className="download-btn"
           >
             <FaDownload />
