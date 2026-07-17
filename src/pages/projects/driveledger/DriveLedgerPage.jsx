@@ -8,7 +8,7 @@ import ScreenshotGallery from "./components/ScreenshotGallery";
 import TechStackSection from "./sections/TechStack";
 import PorjectArchitectureSection from "./sections/ProjectArchitecture";
 import ChallengesSection from "./sections/ChallengesSection";
-import LearningSection from "../portfolio-v1/sections/LearningSection";
+import LearningSection from "./sections/LearningSection";
 
 function DriveLedgerPage() {
     const navigate = useNavigate();
