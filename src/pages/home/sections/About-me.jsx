@@ -44,7 +44,7 @@ function AboutMe() {
         
           
         <div className="about-highlights">
-           <Reveal direction="up" delay={0.2}>
+           <Reveal direction="up" delay={0.05}>
 
           <div className="highlight">
             <span className="number">01</span>
@@ -61,7 +61,7 @@ function AboutMe() {
             </div>
           </div>
           </Reveal>
-          <Reveal direction="up" delay={0.4}>
+          <Reveal direction="up" delay={0.1}>
 
           <div className="highlight">
             <span className="number">02</span>
@@ -78,7 +78,7 @@ function AboutMe() {
             </div>
           </div>
           </Reveal>
-           <Reveal direction="up" delay={0.6}>
+           <Reveal direction="up" delay={0.15}>
 
 
           <div className="highlight">
@@ -96,7 +96,7 @@ function AboutMe() {
             </div>
           </div>
           </Reveal>
-          <Reveal direction="up" delay={0.8}>
+          <Reveal direction="up" delay={0.2}>
 
           <div className="highlight">
             <span className="number">04</span>
