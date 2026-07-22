@@ -3,7 +3,7 @@ import Reveal from "../../../components/Reveal";
 
 function ResumeButton() {
   return (
-    <Reveal direction="up" delay={0.8}>
+    <Reveal direction="up" delay={0.5}>
     <div className="resume-download">
       <a
         href="/Rishi.pdf"

@@ -26,6 +26,7 @@ import { GrMysql } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 import "./Skill.css";
+import Reveal from "../../../components/Reveal";
 
 function Skill() {
   const categories = [
@@ -79,30 +80,37 @@ function Skill() {
 
   return (
     <section className="skills-section">
-      <h2 className="section-heading">Technical Skills</h2>
-
-      <motion.div
-        className="category-grid"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+      <Reveal direction="up">
+        <h2 className="section-heading">Technical Skills</h2>
+      </Reveal>
+      <Reveal
+        direction="up"
+        delay={0.4}
       >
-        {categories.map((category) => (
-          <div className="category-card" key={category.title}>
-            <h3>{category.title}</h3>
+        <motion.div
+          className="category-grid"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          {categories.map((category) => (
 
-            <div className="skills-list">
-              {category.skills.map((skill) => (
-                <div className="skill-item" key={skill.name}>
-                  <span className="skill-icon">{skill.icon}</span>
-                  <span>{skill.name}</span>
-                </div>
-              ))}
+            <div className="category-card" key={category.title}>
+              <h3>{category.title}</h3>
+
+              <div className="skills-list">
+                {category.skills.map((skill) => (
+                  <div className="skill-item" key={skill.name}>
+                    <span className="skill-icon">{skill.icon}</span>
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </Reveal>
     </section>
   );
 }
