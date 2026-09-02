@@ -3,11 +3,19 @@ import {
   FaLinkedin,
   FaEnvelope
 } from "react-icons/fa";
-import './SocialLinks.css';
+import "./SocialLinks.css";
 
 import { SiLeetcode } from "react-icons/si";
+import { trackEvent } from "../utils/analytics";
 
 function SocialLinks() {
+
+  const handleSocialClick = (platform) => {
+    trackEvent("social_click", {
+      platform: platform
+    });
+  };
+
   return (
     <div className="social-links">
 
@@ -16,6 +24,7 @@ function SocialLinks() {
         target="_blank"
         rel="noreferrer"
         className="social-icon"
+        onClick={() => handleSocialClick("github")}
       >
         <FaGithub />
         <span className="tooltip">GitHub</span>
@@ -26,6 +35,7 @@ function SocialLinks() {
         target="_blank"
         rel="noreferrer"
         className="social-icon"
+        onClick={() => handleSocialClick("linkedin")}
       >
         <FaLinkedin />
         <span className="tooltip">LinkedIn</span>
@@ -36,6 +46,7 @@ function SocialLinks() {
         target="_blank"
         rel="noreferrer"
         className="social-icon"
+        onClick={() => handleSocialClick("leetcode")}
       >
         <SiLeetcode />
         <span className="tooltip">LeetCode</span>
@@ -44,6 +55,7 @@ function SocialLinks() {
       <a
         href="mailto:rishipanneerselvam@gmail.com"
         className="social-icon"
+        onClick={() => handleSocialClick("email")}
       >
         <FaEnvelope />
         <span className="tooltip">Email</span>

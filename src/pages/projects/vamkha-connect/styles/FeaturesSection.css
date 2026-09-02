@@ -1,0 +1,255 @@
+/* =========================================
+   VAMKHA Features
+========================================= */
+
+.vamkha-features {
+
+    padding: 100px 40px;
+
+    background: #0b1220;
+}
+
+
+.vamkha-features-container {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   Heading
+========================================= */
+
+.vamkha-features .vamkha-section-heading {
+
+    max-width: 800px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+
+.vamkha-features .vamkha-section-label {
+
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background: rgba(97, 218, 251, .10);
+
+    border: 1px solid rgba(97, 218, 251, .25);
+
+    color: #61dafb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.vamkha-features .vamkha-section-heading h2 {
+
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+}
+
+
+.vamkha-features .vamkha-section-heading p {
+
+    margin: 0;
+
+    color: #c9ced8;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Features Grid
+========================================= */
+
+.vamkha-features-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================
+   Feature Card
+========================================= */
+
+.vamkha-feature-card {
+
+    display: flex;
+
+    gap: 22px;
+
+    padding: 30px;
+
+    background: #171f2d;
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    border-radius: 18px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.vamkha-feature-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(97, 218, 251, .30);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .25);
+}
+
+
+/* =========================================
+   Icon
+========================================= */
+
+.vamkha-feature-icon {
+
+    flex-shrink: 0;
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        rgba(97, 218, 251, .10);
+
+    color: #61dafb;
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   Content
+========================================= */
+
+.vamkha-feature-content h3 {
+
+    margin: 2px 0 9px;
+
+    color: white;
+
+    font-size: 21px;
+}
+
+
+.vamkha-feature-content p {
+
+    margin: 0;
+
+    color: #c7ccd6;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+    .vamkha-features {
+
+        padding: 75px 20px;
+    }
+
+
+    .vamkha-features .vamkha-section-heading {
+
+        margin-bottom: 40px;
+    }
+
+
+    .vamkha-features .vamkha-section-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .vamkha-features .vamkha-section-heading p {
+
+        font-size: 15px;
+    }
+
+
+    .vamkha-features-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .vamkha-feature-card {
+
+        padding: 24px;
+
+        gap: 17px;
+    }
+
+
+    .vamkha-feature-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 21px;
+    }
+
+
+    .vamkha-feature-content h3 {
+
+        font-size: 19px;
+    }
+
+
+    .vamkha-feature-content p {
+
+        font-size: 14px;
+    }
+
+}

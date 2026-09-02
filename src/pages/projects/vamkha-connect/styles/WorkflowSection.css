@@ -1,0 +1,282 @@
+/* =========================================
+   VAMKHA Workflow
+========================================= */
+
+.vamkha-workflow {
+
+    padding: 100px 40px;
+
+    background: #0f172a;
+}
+
+.vamkha-workflow-container {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   Heading
+========================================= */
+
+.vamkha-workflow .vamkha-section-heading {
+
+    max-width: 780px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.vamkha-workflow .vamkha-section-label {
+
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background: rgba(97, 218, 251, .10);
+
+    border: 1px solid rgba(97, 218, 251, .25);
+
+    color: #61dafb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.vamkha-workflow .vamkha-section-heading h2 {
+
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+}
+
+.vamkha-workflow .vamkha-section-heading p {
+
+    margin: 0;
+
+    color: #c9ced8;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Workflow
+========================================= */
+
+.vamkha-workflow-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   Step
+========================================= */
+
+.vamkha-workflow-step {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        55px 70px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 30px;
+
+    background: #171f2d;
+
+    border: 1px solid rgba(255, 255, 255, .06);
+
+    border-radius: 18px;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+.vamkha-workflow-step:hover {
+
+    transform: translateX(6px);
+
+    border-color:
+        rgba(97, 218, 251, .30);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .25);
+}
+
+
+/* =========================================
+   Number
+========================================= */
+
+.vamkha-workflow-number {
+
+    color: #61dafb;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   Icon
+========================================= */
+
+.vamkha-workflow-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 16px;
+
+    background:
+        rgba(97, 218, 251, .10);
+
+    color: #61dafb;
+
+    font-size: 24px;
+}
+
+
+/* =========================================
+   Content
+========================================= */
+
+.vamkha-workflow-content h3 {
+
+    margin: 0 0 7px;
+
+    color: white;
+
+    font-size: 21px;
+}
+
+.vamkha-workflow-content p {
+
+    margin: 0;
+
+    color: #c7ccd6;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   Arrow
+========================================= */
+
+.vamkha-workflow-arrow {
+
+    position: absolute;
+
+    bottom: -28px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #61dafb;
+
+    font-size: 24px;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+    .vamkha-workflow {
+
+        padding: 75px 20px;
+    }
+
+    .vamkha-workflow .vamkha-section-heading {
+
+        margin-bottom: 40px;
+    }
+
+    .vamkha-workflow .vamkha-section-heading h2 {
+
+        font-size: 30px;
+    }
+
+    .vamkha-workflow .vamkha-section-heading p {
+
+        font-size: 15px;
+    }
+
+    .vamkha-workflow-step {
+
+        grid-template-columns:
+            45px 55px 1fr;
+
+        gap: 14px;
+
+        padding: 22px 18px;
+    }
+
+    .vamkha-workflow-number {
+
+        font-size: 14px;
+    }
+
+    .vamkha-workflow-icon {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+    .vamkha-workflow-content h3 {
+
+        font-size: 18px;
+    }
+
+    .vamkha-workflow-content p {
+
+        font-size: 14px;
+    }
+
+}

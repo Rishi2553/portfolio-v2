@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 import VideoModal from "../../../../components/VideoModal";
 import busTrackVideo from "../../../../assets/projects/bus-track-plus/bustrackplus.mp4";
+import { trackEvent } from "../../../../utils/analytics";
 
 function HeroSection() {
 
@@ -53,13 +54,24 @@ function HeroSection() {
             target="_blank"
             rel="noreferrer"
             className="github-btn"
+            onClick={() =>
+              trackEvent("github_click", {
+                project_name: "BusTrackPlus"
+              })
+            }
           >
             <FaGithub /> View Source Code
           </a>
 
           <button
             className="demo-btn"
-            onClick={() => setIsVideoOpen(true)}
+            onClick={() => {
+              trackEvent("project_demo", {
+                project_name: "BusTrackPlus"
+              });
+
+              setIsVideoOpen(true);
+            }}
           >
             <FaPlay /> Watch Project Walkthrough
           </button>

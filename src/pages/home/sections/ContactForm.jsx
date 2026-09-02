@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { trackEvent } from "../../../utils/analytics";
 
 function ContactForm() {
 
@@ -43,6 +44,8 @@ function ContactForm() {
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
             .then(() => {
+                trackEvent("contact_form_submit");
+
                 alert("Message sent successfully!");
 
                 setFormData({

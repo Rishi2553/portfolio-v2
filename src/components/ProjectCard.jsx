@@ -1,12 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./ProjectCard.css";
+import { trackEvent } from "../utils/analytics";
 
 function ProjectCard({ project }) {
   const navigate = useNavigate();
 
   return (
     <div className="project-card"
-    onClick={() => navigate(project.route)}>
+      onClick={() => {
+        trackEvent("project_view", {
+          project_id: project.title,
+          project_route: project.route
+        });
+        navigate(project.route);
+      }}>
 
       <div className="project-image">
         <img

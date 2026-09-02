@@ -1,0 +1,249 @@
+/* =========================================
+   VAMKHA Connect - Hero
+========================================= */
+
+.vamkha-connect-hero {
+
+    min-height: 620px;
+
+    padding: 100px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* =========================================
+   Background Glow
+========================================= */
+
+.vamkha-connect-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle,
+            rgba(97, 218, 251, .16),
+            rgba(97, 218, 251, .05),
+            transparent 70%);
+
+    filter: blur(45px);
+
+    pointer-events: none;
+}
+
+/* =========================================
+   Content
+========================================= */
+
+.vamkha-connect-hero-content {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* =========================================
+   Badge
+========================================= */
+
+.vamkha-project-badge {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(97, 218, 251, .10);
+
+    border: 1px solid rgba(97, 218, 251, .25);
+
+    color: #61dafb;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   Title
+========================================= */
+
+.vamkha-connect-hero h1 {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 64px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+/* =========================================
+   Subtitle
+========================================= */
+
+.vamkha-connect-hero h2 {
+
+    margin: 20px 0;
+
+    color: #61dafb;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+/* =========================================
+   Description
+========================================= */
+
+.vamkha-connect-hero p {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #d0d0d8;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   Button
+========================================= */
+
+.vamkha-hero-btn {
+
+    margin-top: 35px;
+
+    padding: 13px 24px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #61dafb;
+
+    color: #151829;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.vamkha-hero-btn span {
+
+    font-size: 19px;
+
+    transition: transform .3s ease;
+}
+
+.vamkha-hero-btn:hover {
+
+    background: white;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(97, 218, 251, .20);
+}
+
+.vamkha-hero-btn:hover span {
+
+    transform: translateY(3px);
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media(max-width:768px) {
+
+    .vamkha-connect-hero {
+
+        min-height: auto;
+
+        padding: 80px 20px;
+    }
+
+    .vamkha-project-badge {
+
+        font-size: 12px;
+
+        padding: 7px 14px;
+
+        margin-bottom: 20px;
+    }
+
+    .vamkha-connect-hero h1 {
+
+        font-size: 42px;
+    }
+
+    .vamkha-connect-hero h2 {
+
+        font-size: 20px;
+
+        margin: 16px 0;
+    }
+
+    .vamkha-connect-hero p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .vamkha-hero-btn {
+
+        margin-top: 28px;
+
+        padding: 12px 20px;
+
+        font-size: 14px;
+    }
+
+}

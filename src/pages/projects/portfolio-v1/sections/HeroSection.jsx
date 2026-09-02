@@ -3,6 +3,7 @@ import { FaPlay, FaGlobe } from "react-icons/fa";
 
 import VideoModal from "../../../../components/VideoModal";
 import portfolioDemo from "../../../../assets/projects/portfolio/demo.mp4";
+import { trackEvent } from "../../../../utils/analytics";
 
 function HeroSection() {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -47,6 +48,11 @@ function HeroSection() {
                         target="_blank"
                         rel="noreferrer"
                         className="github-btn"
+                        onClick={() =>
+                            trackEvent("external_project_click", {
+                                project_name: "Portfolio V1"
+                            })
+                        }
                     >
                         <FaGlobe />
                         Visit Portfolio
@@ -54,7 +60,13 @@ function HeroSection() {
 
                     <button
                         className="demo-btn"
-                        onClick={() => setIsVideoOpen(true)}
+                        onClick={() => {
+                            trackEvent("project_demo", {
+                                project_name: "Portfolio V1"
+                            });
+
+                            setIsVideoOpen(true);
+                        }}
                     >
                         <FaPlay />
                         Website Demo

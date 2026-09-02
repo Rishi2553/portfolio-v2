@@ -4,6 +4,7 @@ import {
 } from "react-icons/fa";
 
 import FloatingPhones from "../components/FloatingPhones";
+import { trackEvent } from "../../../../utils/analytics";
 
 import "../styles/HeroSection.css";
 
@@ -51,6 +52,11 @@ function HeroSection() {
           <a
             href="https://github.com/Rishi2553/DriveLedger/releases/latest/download/DriveLedger.apk"
             className="download-btn"
+            onClick={() =>
+              trackEvent("apk_download", {
+                project_name: "DriveLedger"
+              })
+            }
           >
             <FaDownload />
             Download APK
@@ -58,7 +64,14 @@ function HeroSection() {
 
           <a
             href="https://github.com/Rishi2553/DriveLedger"
+            target="_blank"
+            rel="noreferrer"
             className="github-btn"
+            onClick={() =>
+              trackEvent("github_click", {
+                project_name: "DriveLedger"
+              })
+            }
           >
             <FaGithub />
             GitHub Repository
