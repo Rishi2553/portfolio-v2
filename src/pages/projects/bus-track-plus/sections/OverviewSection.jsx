@@ -1,15 +1,19 @@
-// import React from "react";
+import Reveal from "../../../../components/Reveal";
+import { FaBullseye, FaExclamationCircle, FaLightbulb } from "react-icons/fa";
 
 function OverviewSection() {
   return (
     <section className="overview-section">
 
-      <h2>Project Overview</h2>
+      <Reveal><h2>Project Overview</h2></Reveal>
 
       <div className="overview-grid">
 
+        <Reveal delay={0.08}>
         <div className="overview-card">
 
+          <div className="overview-card-icon"><FaExclamationCircle /></div>
+          <span className="overview-eyebrow">Current Challenge</span>
           <h3>Problem</h3>
 
           <p>
@@ -19,9 +23,13 @@ function OverviewSection() {
           </p>
 
         </div>
+        </Reveal>
 
+        <Reveal delay={0.16}>
         <div className="overview-card">
 
+          <div className="overview-card-icon"><FaLightbulb /></div>
+          <span className="overview-eyebrow">Our Approach</span>
           <h3>Solution</h3>
 
           <p>
@@ -32,12 +40,16 @@ function OverviewSection() {
           </p>
 
         </div>
+        </Reveal>
 
+        <Reveal delay={0.24}>
         <div className="overview-card">
 
+          <div className="overview-card-icon"><FaBullseye /></div>
+          <span className="overview-eyebrow">Key Outcomes</span>
           <h3>Objectives</h3>
 
-          <ul>
+          <ul className="overview-objectives">
 
             <li>Improve public transportation efficiency</li>
 
@@ -52,6 +64,7 @@ function OverviewSection() {
           </ul>
 
         </div>
+        </Reveal>
 
       </div>
 

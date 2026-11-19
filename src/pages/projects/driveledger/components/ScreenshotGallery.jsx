@@ -7,6 +7,14 @@ import "../styles/ScreenshotGallery.css";
 function ScreenshotGallery() {
 
     const [active, setActive] = useState(0);
+    const [compact, setCompact] = useState(() => window.matchMedia("(max-width: 600px)").matches);
+
+    useEffect(() => {
+        const media = window.matchMedia("(max-width: 600px)");
+        const updateLayout = (event) => setCompact(event.matches);
+        media.addEventListener("change", updateLayout);
+        return () => media.removeEventListener("change", updateLayout);
+    }, []);
 
     useEffect(() => {
 
@@ -58,7 +66,7 @@ function ScreenshotGallery() {
 
                 return {
 
-                    x: -240,
+                    x: compact ? -132 : -240,
 
                     scale: .88,
 
@@ -90,7 +98,7 @@ function ScreenshotGallery() {
 
                 return {
 
-                    x: 240,
+                    x: compact ? 132 : 240,
 
                     scale: .88,
 
@@ -106,7 +114,7 @@ function ScreenshotGallery() {
 
                 return {
 
-                    x: 520,
+                    x: compact ? 280 : 520,
 
                     scale: .75,
 
@@ -122,7 +130,7 @@ function ScreenshotGallery() {
 
                 return {
 
-                    x: -520,
+                    x: compact ? -280 : -520,
 
                     scale: .75,
 

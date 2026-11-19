@@ -9,6 +9,7 @@ import {
 
 import { SiReactrouter , SiFirebase } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import Reveal from "../../../../components/Reveal";
 
 function TechStackSection() {
 
@@ -58,16 +59,14 @@ function TechStackSection() {
   return (
     <section className="tech-section">
 
-      <h2>Technology Stack</h2>
+      <Reveal><h2>Technology Stack</h2></Reveal>
 
       <div className="tech-grid">
 
-        {technologies.map((tech) => (
+        {technologies.map((tech, index) => (
 
-          <div
-            className="tech-card"
-            key={tech.title}
-          >
+          <Reveal key={tech.title} delay={index * 0.06}>
+          <div className="tech-card">
 
             <div className="tech-icon">
               {tech.icon}
@@ -78,6 +77,7 @@ function TechStackSection() {
             <p>{tech.description}</p>
 
           </div>
+          </Reveal>
 
         ))}
 

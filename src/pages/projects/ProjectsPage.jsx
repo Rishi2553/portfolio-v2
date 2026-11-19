@@ -20,10 +20,9 @@ function ProjectsPage() {
         </p>
       </Reveal>
 
-      {projects.map((project) => (
-        <Reveal direction="up" delay={0.2}>
+      {projects.map((project, index) => (
+        <Reveal key={project.id} direction="up" delay={index * 0.1} duration={0.55}>
           <ProjectCard
-            key={project.id}
             project={project}
           />
         </Reveal>

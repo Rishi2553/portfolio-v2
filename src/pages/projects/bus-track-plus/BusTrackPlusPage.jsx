@@ -8,8 +8,8 @@ import DatabaseSection from "./sections/DatabaseSection";
 import TechStackSection from "./sections/TechnologySection";
 import HighlightsSection from "./sections/HighlightsSection";
 import FutureSection from "./sections/FutureSection";
-import ProjectVideoSection from "./sections/ProjectVideoSection";
 import "./BusTrackPlusPage.css";
+import Reveal from "../../../components/Reveal";
 import { useNavigate } from "react-router-dom";
 function BusTrackPlusPage() {
     const navigate = useNavigate();
@@ -18,37 +18,25 @@ function BusTrackPlusPage() {
 
             <div className="page-container">
 
-                <button 
-                className="back-btn"
-                onClick={() => navigate("/projects")}>
-                    ← Back to Projects
-                </button>
-                <HeroSection />
+                <div className="project-back-row">
+                    <button
+                        className="back-btn"
+                        onClick={() => navigate("/projects")}
+                    >
+                        ← Back to Projects
+                    </button>
+                </div>
 
+                <Reveal><HeroSection /></Reveal>
                 <OverviewSection />
-
-                <AdminSection />
-
-                <ConductorSection />
-
-                <PassengerSection />
-
-                <ArchitectureSection />
-
-                <DatabaseSection />
-
-                <TechStackSection />
-
-                <HighlightsSection />
-
-                <FutureSection />
-
-                <ProjectVideoSection />
-
-
-
-
-
+                <Reveal delay={0.025}><AdminSection /></Reveal>
+                <Reveal delay={0.05}><ConductorSection /></Reveal>
+                <Reveal delay={0.075}><PassengerSection /></Reveal>
+                <Reveal delay={0.1}><ArchitectureSection /></Reveal>
+                <Reveal delay={0.125}><DatabaseSection /></Reveal>
+                <Reveal delay={0.15}><TechStackSection /></Reveal>
+                <Reveal delay={0.175}><HighlightsSection /></Reveal>
+                <Reveal delay={0.2}><FutureSection /></Reveal>
 
             </div>
 

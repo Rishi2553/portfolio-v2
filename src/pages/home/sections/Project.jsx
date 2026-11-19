@@ -10,10 +10,9 @@ function Project() {
       <Reveal direction="up">
         <h2 className="section-heading">Projects</h2>
       </Reveal>
-      {homeProjects.map((project) => (
-        <Reveal direction="up" delay={ 0.2}>
+      {homeProjects.map((project, index) => (
+        <Reveal key={project.id} direction="up" delay={index * 0.12} duration={0.55}>
           <ProjectCard
-            key={project.id}
             project={project}
           />
         </Reveal>

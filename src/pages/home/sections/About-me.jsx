@@ -52,7 +52,7 @@ function AboutMe() {
         <Reveal direction="down" delay={0.2}>
           <div className="stat">
             <h2>340+</h2>
-            <span>Problems Solved</span>
+            <span>Leetcode Problems Solved</span>
           </div>
         </Reveal>
 

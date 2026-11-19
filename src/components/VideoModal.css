@@ -30,7 +30,13 @@
 
     overflow: hidden;
 
-    background: #2f3256;
+    background: #fff;
+
+    color: #111827;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .28);
 
     border-radius: 20px;
 
@@ -81,9 +87,11 @@
 
     cursor:pointer;
 
-    background:#313552;
+    background:#fff;
 
-    color:white;
+    color:#111827;
+
+    border: 1px solid #dbe4ec;
 
     font-size:20px;
 
@@ -156,7 +164,7 @@
 
     text-align: center;
 
-    color: #d6d6d6;
+    color: #111827;
 
     line-height: 1.7;
 

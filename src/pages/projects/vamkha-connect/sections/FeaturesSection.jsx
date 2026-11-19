@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 
 import "../styles/FeaturesSection.css";
+import Reveal from "../../../../components/Reveal";
 
 function FeaturesSection() {
 
@@ -63,6 +64,7 @@ function FeaturesSection() {
 
       <div className="vamkha-features-container">
 
+        <Reveal>
         <div className="vamkha-section-heading">
 
           <span className="vamkha-section-label">
@@ -80,16 +82,15 @@ function FeaturesSection() {
           </p>
 
         </div>
+        </Reveal>
 
 
         <div className="vamkha-features-grid">
 
           {features.map((feature, index) => (
 
-            <div
-              className="vamkha-feature-card"
-              key={index}
-            >
+            <Reveal key={feature.title} delay={index * 0.06}>
+            <div className="vamkha-feature-card">
 
               <div className="vamkha-feature-icon">
                 {feature.icon}
@@ -108,6 +109,7 @@ function FeaturesSection() {
               </div>
 
             </div>
+            </Reveal>
 
           ))}
 

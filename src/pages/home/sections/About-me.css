@@ -15,7 +15,7 @@
 /* =========================
    MAIN LAYOUT
    LEFT: DETAILS 75%
-   RIGHT: DEVELOPER CARD 25%
+   RIGHT: CARD 25%
 ========================= */
 
 .about-content {
@@ -70,7 +70,29 @@
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.developer-code-card {
+    width: 100%;
+    max-width: 420px;
+    min-width: 0;
+    box-sizing: border-box;
+}
 
+.developer-code-content {
+    padding: 18px 12px;
+    font-size: 12px;
+    line-height: 1.9;
+
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.developer-code-top {
+    padding: 12px;
+}
+
+.developer-code-filename {
+    font-size: 10px;
+}
 .highlight:last-child {
     border-bottom: none;
 }
@@ -116,6 +138,26 @@
     min-width: 0;
 }
 
+.about-visual .developer-code-card {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+.about-me { background: #fff; color: #111827; }
+.about-me .text,
+.about-me .highlight p,
+.about-me .highlight h3,
+.about-me .stat span { color: #111827; }
+.about-me .highlight { border-bottom-color: #e6eaf0; }
+.about-me .stat {
+    background: #fff;
+    border: 1px solid #e6eaf0;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, .08);
+}
+.about-me .stat h2,
+.about-me .number { color: #087e9b; }
+
 /* =========================
    STATS
 ========================= */
@@ -125,12 +167,22 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
+    align-items: stretch;
 }
 
 .stat {
     background: #313552;
     border-radius: 15px;
-    padding: 28px;
+    padding: 24px;
+
+    min-height: 130px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
     transition: 0.3s ease;
 }
@@ -152,42 +204,54 @@
 }
 
 /* =========================
-   TABLET
+   SMALL LAPTOP / TABLET
 ========================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1375px) {
+
     .about-me {
         padding: 60px 25px;
     }
 
+    /* Details first, card underneath */
     .about-content {
         grid-template-columns: minmax(0, 1fr);
-        gap: 35px;
+        gap: 30px;
+        margin-top: 35px;
     }
 
     .about-details {
         gap: 25px;
     }
 
-    .about-description {
-        gap: 20px;
+    .text {
+        font-size: 19px;
+        line-height: 1.75;
     }
 
     .about-visual {
         justify-content: center;
-        padding-top: 10px;
+        padding: 15px 0;
     }
 
     .about-visual > * {
+        width: 100%;
         max-width: 420px;
     }
 
-    .about-highlights {
-        gap: 12px;
+    .about-visual .developer-code-card {
+        max-width: 420px;
     }
 
+    /* Two-column stats */
     .stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 45px;
+    }
+
+    .stat {
+        padding: 24px;
     }
 }
 
@@ -196,13 +260,13 @@
 ========================= */
 
 @media (max-width: 600px) {
+
     .about-me {
         padding: 50px 20px;
     }
 
     .about-content {
-        gap: 30px;
-        margin-top: 35px;
+        gap: 25px;
     }
 
     .text {
@@ -210,14 +274,23 @@
         line-height: 1.8;
     }
 
+    .about-description {
+        gap: 20px;
+    }
+
     .about-visual {
-        padding-top: 0;
+        padding: 10px 0;
     }
 
     .about-visual > * {
         max-width: 100%;
     }
 
+    .about-visual .developer-code-card {
+        max-width: 100%;
+    }
+
+    /* Highlights */
     .highlight {
         gap: 15px;
         padding: 16px 0;
@@ -236,9 +309,11 @@
         font-size: 14px;
     }
 
+    /* Single-column stats */
     .stats {
         grid-template-columns: 1fr;
-        margin-top: 40px;
+        gap: 14px;
+        margin-top: 35px;
     }
 
     .stat {

@@ -40,7 +40,7 @@ function ChallengesSection() {
 
                     <Reveal
                         key={item.id}
-                        delay={index * 0.12}
+                        delay={index * 0.06}
                     >
 
                         <ChallengeCard item={item} />

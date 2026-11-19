@@ -8,6 +8,7 @@ import FeaturesSection from "./sections/FeaturesSection";
 import LearningSection from "./sections/LearningSection";
 import EvolutionSection from "./sections/EvolutionSection";
 import { useNavigate } from "react-router-dom";
+import Reveal from "../../../components/Reveal";
 
 function PortfolioV1Page() {
     const navigate = useNavigate();
@@ -15,17 +16,20 @@ function PortfolioV1Page() {
     <main className="bus-page">
 
       <div className="page-container">
-         <button 
-                className="back-btn"
-                onClick={() => navigate("/projects")}>
-                    ← Back to Projects
-                </button>
-        <HeroSection />
+        <div className="project-back-row">
+          <button
+            className="back-btn"
+            onClick={() => navigate("/projects")}
+          >
+            ← Back to Projects
+          </button>
+        </div>
+        <Reveal><HeroSection /></Reveal>
         <OverviewSection />
         <TechStackSection />
         <FeaturesSection />
         <LearningSection />
-        <EvolutionSection />
+        <Reveal delay={0.16}><EvolutionSection /></Reveal>
 
       </div>
 

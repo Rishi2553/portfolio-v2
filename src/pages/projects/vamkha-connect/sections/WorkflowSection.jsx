@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 
 import "../styles/WorkflowSection.css";
+import Reveal from "../../../../components/Reveal";
 
 function WorkflowSection() {
 
@@ -51,6 +52,7 @@ function WorkflowSection() {
 
       <div className="vamkha-workflow-container">
 
+        <Reveal>
         <div className="vamkha-section-heading">
 
           <span className="vamkha-section-label">
@@ -67,16 +69,15 @@ function WorkflowSection() {
           </p>
 
         </div>
+        </Reveal>
 
 
         <div className="vamkha-workflow-list">
 
           {steps.map((step, index) => (
 
-            <div
-              className="vamkha-workflow-step"
-              key={step.number}
-            >
+            <Reveal key={step.number} delay={index * 0.06}>
+            <div className="vamkha-workflow-step">
 
               <div className="vamkha-workflow-number">
                 {step.number}
@@ -107,6 +108,7 @@ function WorkflowSection() {
               )}
 
             </div>
+            </Reveal>
 
           ))}
 

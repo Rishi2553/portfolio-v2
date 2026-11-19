@@ -4,6 +4,7 @@ import HeroSection from "./sections/HeroSection";
 import OverviewSection from "./sections/OverviewSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import WorkflowSection from "./sections/WorkflowSection";
+import Reveal from "../../../components/Reveal";
 
 function VamkhaConnectPage() {
 
@@ -11,7 +12,7 @@ function VamkhaConnectPage() {
 
     <main className="vamkha-connect-page">
 
-       <HeroSection />
+       <Reveal><HeroSection /></Reveal>
        <OverviewSection />
        <FeaturesSection />
        <WorkflowSection />

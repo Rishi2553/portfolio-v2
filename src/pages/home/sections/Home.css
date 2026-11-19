@@ -36,6 +36,14 @@
     /* margin-bottom: 20px; */
 }
 
+.home-section {
+    background: #fff;
+    border-bottom-color: #e6eaf0;
+}
+
+.home-content h1 { color: #111827; }
+.home-content h2 { color: #087e9b; }
+
 @media (max-width: 768px) {
 
     .home-section {

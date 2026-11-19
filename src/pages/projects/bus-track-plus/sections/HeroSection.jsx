@@ -1,19 +1,9 @@
-import { useState } from "react";
-import {
-  FaPlay
-} from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-import VideoModal from "../../../../components/VideoModal";
-import busTrackVideo from "../../../../assets/projects/bus-track-plus/bustrackplus.mp4";
 import { trackEvent } from "../../../../utils/analytics";
 
 function HeroSection() {
-
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   return (
-    <>
       <section className="hero-section">
 
         <div className="project-badge">
@@ -63,31 +53,9 @@ function HeroSection() {
             <FaGithub /> View Source Code
           </a>
 
-          <button
-            className="demo-btn"
-            onClick={() => {
-              trackEvent("project_demo", {
-                project_name: "BusTrackPlus"
-              });
-
-              setIsVideoOpen(true);
-            }}
-          >
-            <FaPlay /> Watch Project Walkthrough
-          </button>
-
         </div>
 
       </section>
-
-      <VideoModal
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        src={busTrackVideo}
-        title="BusTrackPlus Project Walkthrough"
-        description="A 5-minute presentation covering the project overview, system architecture, database design, and a live demonstration of the Admin, Conductor, and Passenger applications."
-      />
-    </>
   );
 }
 

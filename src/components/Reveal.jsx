@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 function Reveal({
   children,
   direction = "up",
-  duration = 0.8,
+  duration = 0.55,
   delay = 0,
 }) {
   const directions = {
-    up: { y: 80 },
-    down: { y: -80 },
-    left: { x: -100 },
-    right: { x: 100 },
+    up: { y: 32 },
+    down: { y: -32 },
+    left: { x: -32 },
+    right: { x: 32 },
     fade: {},
   };
 
@@ -29,8 +29,9 @@ function Reveal({
       transition={{
         duration,
         delay,
+        ease: "easeOut",
       }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.15 }}
     >
       {children}
     </motion.div>

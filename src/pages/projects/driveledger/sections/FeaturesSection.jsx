@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 
 import "../styles/FeaturesSection.css";
+import Reveal from "../../../../components/Reveal";
 
 const features = [
   {
@@ -52,15 +53,14 @@ function FeaturesSection() {
   return (
     <section className="features-section">
 
-      <h2 className="section-title">
-        Key Features
-      </h2>
+      <Reveal><h2 className="section-title">Key Features</h2></Reveal>
 
       <div className="features-grid">
 
         {features.map((feature, index) => (
 
-          <div className="feature-card" key={index}>
+          <Reveal key={feature.title} delay={index * 0.06}>
+          <div className="feature-card">
 
             <div className="feature-icon">
               {feature.icon}
@@ -71,6 +71,7 @@ function FeaturesSection() {
             <p>{feature.description}</p>
 
           </div>
+          </Reveal>
 
         ))}
 

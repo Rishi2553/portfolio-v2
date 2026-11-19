@@ -219,6 +219,55 @@
     color:#61dafb;
 }
 
+.bus-page .learning-section {
+    text-align: center;
+}
+
+.bus-page .learning-intro {
+    max-width: 900px;
+    margin: 0 auto 32px;
+    padding: 18px 24px;
+    border: 1px solid #e6eaf0;
+    border-radius: 16px;
+    background: #f8fafc;
+    color: #526174 !important;
+    text-align: center !important;
+}
+
+.bus-page .learning-grid {
+    align-items: stretch;
+}
+
+.bus-page .learning-card {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: center;
+}
+
+.bus-page .learning-card .learning-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    border: 1px solid #b9eaf5;
+    border-radius: 18px;
+    background: #effbfe;
+    color: #087e9b !important;
+    font-size: 26px;
+}
+
+.bus-page .learning-card p {
+    max-width: 38ch;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
 @media(max-width:768px){
 
     .evolution-grid{

@@ -154,6 +154,25 @@
   left: 150%;
 }
 
+.career-section { background: #fff; color: #111827; }
+.timeline-content {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .07);
+  text-align: center;
+}
+.timeline-content :is(h4, p) { color: #111827; }
+.timeline-content span { color: #087e9b; }
+.timeline-content:hover { background: #f8fdff; }
+.timeline-dot { border-color: #fff; }
+.resume-btn {
+  background: #e8f8fc;
+  color: #075f75;
+  box-shadow: 0 8px 22px rgba(8, 126, 155, .16);
+}
+.resume-btn:hover { box-shadow: 0 12px 30px rgba(8, 126, 155, .22); }
+
 @media (max-width: 768px) {
 
   .career-section {

@@ -11,8 +11,9 @@
 }
 
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
 }
 
@@ -22,18 +23,21 @@
   padding: 28px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
   transition: .35s;
+
+  flex: 0 1 290px;
+  box-sizing: border-box;
 }
 
 .category-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
 }
 
 .category-card h3 {
   color: #61dafb;
   margin-bottom: 22px;
   font-size: 24px;
-  border-bottom: 2px solid rgba(97,218,251,.3);
+  border-bottom: 2px solid rgba(97, 218, 251, .3);
   padding-bottom: 12px;
 }
 
@@ -47,14 +51,28 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, .08);
   padding: 12px 16px;
   border-radius: 12px;
   transition: .3s;
 }
 
+.skills-section { background: #fff; color: #111827; text-align: center; }
+.category-card {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .08);
+  text-align: center;
+}
+.category-card h3 { color: #087e9b; }
+.skill-item { background: #f8fafc; border: 1px solid #e6eaf0; }
+.skill-item span { color: #111827; }
+.skill-item span:last-child { color: #111827; }
+.skill-icon { color: #087e9b; }
+
 .skill-item:hover {
-  background: rgba(97,218,251,.18);
+  background: rgba(97, 218, 251, .18);
   transform: translateX(6px);
 }
 
@@ -70,29 +88,51 @@
   font-weight: 500;
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .skills-section{
-    padding:60px 20px;
+  .skills-section {
+    padding: 60px 20px;
   }
 
-  .skills-section h2{
-    font-size:34px;
+  .skills-section h2 {
+    font-size: 34px;
   }
 
-  .category-card{
-    padding:22px;
+  .category-card {
+    padding: 22px;
   }
 
-  .category-card h3{
-    font-size:21px;
+  .category-card h3 {
+    font-size: 21px;
   }
 
-  .skill-item{
-    padding:10px 14px;
+  .skill-item {
+    padding: 10px 14px;
   }
 
-  .skill-icon{
-    font-size:24px;
+  .skill-icon {
+    font-size: 24px;
   }
+}
+
+/* Keep the light skill cards readable after the legacy dark theme rules. */
+.skills-section h2,
+.skills-section .category-card,
+.skills-section .category-card h3,
+.skills-section .skill-item span,
+.skills-section .skill-item span:last-child {
+  color: #111827;
+}
+
+.skills-section { background: #fff; }
+.skills-section .category-card {
+  background: #fff;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .08);
+}
+.skills-section .category-card h3,
+.skills-section .skill-icon { color: #087e9b; }
+.skills-section .skill-item {
+  background: #f8fafc;
+  border: 1px solid #e6eaf0;
 }

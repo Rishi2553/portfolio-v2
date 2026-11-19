@@ -1,4 +1,5 @@
 import "../styles/OverviewSection.css";
+import Reveal from "../../../../components/Reveal";
 
 function OverviewSection() {
   return (
@@ -6,6 +7,7 @@ function OverviewSection() {
 
       <div className="vamkha-overview-container">
 
+        <Reveal>
         <div className="vamkha-section-heading">
 
           <span className="vamkha-section-label">
@@ -23,12 +25,14 @@ function OverviewSection() {
           </p>
 
         </div>
+        </Reveal>
 
 
         <div className="vamkha-product-grid">
 
           {/* VAMKHA Connect */}
 
+          <Reveal delay={0.08}>
           <div className="vamkha-product-card">
 
             <div className="vamkha-product-icon">
@@ -58,10 +62,12 @@ function OverviewSection() {
             </div>
 
           </div>
+          </Reveal>
 
 
           {/* VAMKHA BT Simulator */}
 
+          <Reveal delay={0.16}>
           <div className="vamkha-product-card">
 
             <div className="vamkha-product-icon">
@@ -91,6 +97,7 @@ function OverviewSection() {
             </div>
 
           </div>
+          </Reveal>
 
         </div>
 

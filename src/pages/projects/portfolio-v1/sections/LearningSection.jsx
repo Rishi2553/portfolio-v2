@@ -6,6 +6,7 @@ import {
   FaLightbulb,
   FaCode,
 } from "react-icons/fa";
+import Reveal from "../../../../components/Reveal";
 
 function LearningSection() {
 
@@ -51,22 +52,22 @@ function LearningSection() {
   return (
     <section className="learning-section">
 
-      <h2>What I Learned</h2>
+      <Reveal><h2>What I Learned</h2></Reveal>
 
+      <Reveal delay={0.06}>
       <p className="learning-intro">
         Developing Portfolio V1 strengthened my frontend development
         fundamentals and laid the foundation for building larger and
         better React applications.
       </p>
+      </Reveal>
 
       <div className="learning-grid">
 
-        {learnings.map((item) => (
+        {learnings.map((item, index) => (
 
-          <div
-            key={item.title}
-            className="learning-card"
-          >
+          <Reveal key={item.title} delay={index * 0.06}>
+          <div className="learning-card">
 
             <div className="learning-icon">
               {item.icon}
@@ -77,6 +78,7 @@ function LearningSection() {
             <p>{item.description}</p>
 
           </div>
+          </Reveal>
 
         ))}
 

@@ -9,6 +9,7 @@ import TechStackSection from "./sections/TechStack";
 import PorjectArchitectureSection from "./sections/ProjectArchitecture";
 import ChallengesSection from "./sections/ChallengesSection";
 import LearningSection from "./sections/LearningSection";
+import Reveal from "../../../components/Reveal";
 
 function DriveLedgerPage() {
     const navigate = useNavigate();
@@ -19,16 +20,19 @@ function DriveLedgerPage() {
                 
 
             <div className="page-container">
-                            <button 
-                className="back-btn"
-                onClick={() => navigate("/projects")}>
-                    ← Back to Projects
-                </button>
+                <div className="project-back-row">
+                    <button
+                        className="back-btn"
+                        onClick={() => navigate("/projects")}
+                    >
+                        ← Back to Projects
+                    </button>
+                </div>
 
-                <HeroSection />
+                <Reveal><HeroSection /></Reveal>
                 <OverviewSection />
                 <FeaturesSection />
-                <ScreenshotGallery />
+                <Reveal delay={0.08}><ScreenshotGallery /></Reveal>
                 <TechStackSection />
                 <PorjectArchitectureSection />
                 <ChallengesSection />

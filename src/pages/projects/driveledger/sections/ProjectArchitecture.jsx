@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaArrowDown } from "react-icons/fa";
+import Reveal from "../../../../components/Reveal";
 
 import { architecture } from "../data/architecture";
 
@@ -11,15 +12,15 @@ function ProjectArchitecture() {
 
         <section className="architecture-section">
 
-            <h2 className="section-title">
-                Project Architecture
-            </h2>
+            <Reveal><h2 className="section-title">Project Architecture</h2></Reveal>
 
+            <Reveal delay={0.06}>
             <p className="architecture-subtitle">
                 DriveLedger follows a clean layered architecture to keep the user interface,
                 business logic, and data management independent, making the application
                 scalable and easy to maintain.
             </p>
+            </Reveal>
 
             <div className="architecture-container">
 
@@ -42,8 +43,8 @@ function ProjectArchitecture() {
                                     y: 0
                                 }}
                                 transition={{
-                                    duration: 0.5,
-                                    delay: index * 0.15
+                                    duration: 0.55,
+                                    delay: index * 0.06
                                 }}
                                 viewport={{ once: true }}
                                 whileHover={{
@@ -88,7 +89,8 @@ function ProjectArchitecture() {
                                         opacity: 1
                                     }}
                                     transition={{
-                                        delay: index * 0.2
+                                        duration: 0.55,
+                                        delay: index * 0.06
                                     }}
                                     viewport={{ once: true }}
                                 >

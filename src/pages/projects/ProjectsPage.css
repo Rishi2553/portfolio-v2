@@ -1,15 +1,18 @@
 #project-section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: clamp(24px, 4vw, 56px);
+    color: #111827;
+    text-align: center;
 }
 
 .section-heading {
     text-align: center;
 
-    color: #fff;
+    color: #111827;
 
-    font-size: 56px;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
     font-weight: 700;
 
     margin-bottom: 50px;
@@ -18,11 +21,42 @@
 .section-subtitle {
     text-align: center;
 
-    color: #b8c0d4;
+    color: #526174;
 
     font-size: 18px;
 
     max-width: 700px;
 
-    margin: -20px auto 50px;
+    margin: 0 auto 50px;
+}
+
+/* Scope card styles on this route to avoid the home-page project card rules. */
+#project-section .project-card {
+    width: 100%;
+    padding: 0;
+    margin: 35px 0;
+    background: #fff;
+    color: #111827;
+    border-radius: 15px;
+    border: 1px solid #e6eaf0;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, .09);
+}
+
+#project-section .project-card :is(h2, h3, h4, p) {
+    color: #111827;
+}
+
+#project-section .project-tech .tech-chip {
+    background: #e8f8fc;
+    color: #075f75;
+    border: 1px solid #b9eaf5;
+}
+
+#project-section .project-footer { justify-content: center; }
+
+@media (max-width: 768px) {
+    #project-section .project-card {
+        padding: 0;
+        margin: 35px 0;
+    }
 }

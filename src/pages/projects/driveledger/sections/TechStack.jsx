@@ -39,7 +39,7 @@ function TechStack() {
 
                     <Reveal
                         key={tech.id}
-                        delay={0.15 * index}
+                        delay={0.06 * index}
                     >
 
                         <TechCard tech={tech} />

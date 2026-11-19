@@ -1,6 +1,23 @@
 .project-section {
-  padding: 40px 40px;
+  padding: clamp(24px, 4vw, 56px);
   background: #2f315f;
+}
+
+.project-section { background: #fff; color: #111827; text-align: center; }
+.project-section .project-card {
+  background: #fff;
+  color: #111827;
+  border-radius: 15px;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, .09);
+  padding: 0;
+  margin: 35px 0;
+}
+.project-section .project-card :is(h2, h3, p, span) { color: #111827; }
+.project-section .project-card .project-tech .tech-chip {
+  background: #e8f8fc;
+  color: #075f75;
+  border: 1px solid #b9eaf5;
 }
 
 .project-card {
@@ -259,7 +276,7 @@
   width: 5px;
   height: 100%;
 
-  background: #61dafb;
+  background: #087e9b;
 
   border-radius: 16px 0 0 16px;
 }
@@ -285,7 +302,7 @@
 
 @media (max-width: 768px) {
   .project-section {
-    padding: 10px 10px;
+    padding: clamp(24px, 4vw, 56px);
   }
 
 

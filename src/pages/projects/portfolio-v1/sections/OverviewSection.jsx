@@ -1,18 +1,21 @@
 import { FaBullseye, FaLaptopCode, FaArrowUp } from "react-icons/fa";
+import Reveal from "../../../../components/Reveal";
 
 function OverviewSection() {
   return (
     <section className="overview-section">
 
-      <h2>Project Overview</h2>
+      <Reveal><h2>Project Overview</h2></Reveal>
 
       <div className="overview-grid">
 
+        <Reveal delay={0.08}>
         <div className="overview-card">
 
-          <FaBullseye className="overview-icon" />
+          <div className="overview-card-icon"><FaBullseye className="overview-icon" /></div>
+          <span className="overview-eyebrow">Purpose</span>
 
-          <h3>Purpose</h3>
+          <h3>Why It Started</h3>
 
           <p>
             Portfolio Website V1 was created to build my first professional
@@ -21,10 +24,13 @@ function OverviewSection() {
           </p>
 
         </div>
+        </Reveal>
 
+        <Reveal delay={0.16}>
         <div className="overview-card">
 
-          <FaLaptopCode className="overview-icon" />
+          <div className="overview-card-icon"><FaLaptopCode className="overview-icon" /></div>
+          <span className="overview-eyebrow">Development Journey</span>
 
           <h3>Development Journey</h3>
 
@@ -35,12 +41,15 @@ function OverviewSection() {
           </p>
 
         </div>
+        </Reveal>
 
+        <Reveal delay={0.24}>
         <div className="overview-card">
 
-          <FaArrowUp className="overview-icon" />
+          <div className="overview-card-icon"><FaArrowUp className="overview-icon" /></div>
+          <span className="overview-eyebrow">What It Represents</span>
 
-          <h3>Why It's Here</h3>
+          <h3>Why It Still Matters</h3>
 
           <p>
             Although this portfolio has been replaced by the website you are
@@ -50,6 +59,7 @@ function OverviewSection() {
           </p>
 
         </div>
+        </Reveal>
 
       </div>
 
